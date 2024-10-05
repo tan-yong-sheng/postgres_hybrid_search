@@ -94,7 +94,7 @@ def scrape_news(start_date=None, end_date=None):
 if __name__ == "__main__":
     import os
 
-    os.makedirs("data", exist_ok=True)
+    os.makedirs("data/news", exist_ok=True)
 
     # Define the overall date range
     overall_start_date = datetime.strptime("2022-01-01 00:00:00", "%Y-%m-%d %H:%M:%S")

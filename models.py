@@ -10,7 +10,6 @@ from sqlalchemy import (
     func,
 )
 from sqlalchemy.dialects.postgresql import TSVECTOR
-from sqlalchemy.orm import relationship
 from sqlalchemy.types import DateTime, Integer, String
 
 from db_connection import Base
@@ -63,40 +62,16 @@ class NewsOrm(Base):
     )
     title = Column(String(300), nullable=False)
     content = Column(String, nullable=False)
-
-    # Establishing relationship with 'news_chunks' table
-    news_chunks = relationship(
-        "NewsChunksOrm",
-        back_populates="news",
-        cascade="all, delete",
-        passive_deletes=True,
+    embedding = Column(Vector(384), nullable=True)
+    fts = Column(
+        TSVECTOR(),
+        Computed("to_tsvector('english', content)", persisted=True),
     )
 
     __table_args__ = (
         UniqueConstraint("created_at", "title", name="uq_news_createdat_title"),
         CheckConstraint("LENGTH(title)>0", name="check_title_length"),
         CheckConstraint("LENGTH(content)>0", name="check_content_length"),
-    )
-
-
-class NewsChunksOrm(Base):
-    __tablename__ = "news_chunks"
-
-    id = Column(Integer, primary_key=True, autoincrement=True)
-    chunk_content = Column(String, nullable=False)
-    news_id = Column(Integer, ForeignKey("news.id", ondelete="cascade"), nullable=False)
-    embedding = Column(Vector(384), nullable=True)
-    fts = Column(
-        TSVECTOR(),
-        Computed("to_tsvector('english', chunk_content)", persisted=True),
-    )
-
-    news = relationship("NewsOrm", back_populates="news_chunks")
-
-    __table_args__ = (
-        CheckConstraint("LENGTH(chunk_content)>0", name="check_chunk_content_length"),
-        # Define HNSW index to support vector similarity search through the vector_cosine_ops access method (cosine distance).
-        # The SQL operator for cosine distance is written as <=>.
         Index(
             "hnsw_idx_news_chunks_trgm",
             embedding,
