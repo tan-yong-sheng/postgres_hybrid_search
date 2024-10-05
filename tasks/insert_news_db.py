@@ -54,5 +54,4 @@ if __name__ == "__main__":
     for start_date, end_date in generate_date_ranges(
         overall_start_date, overall_end_date
     ):
-        
-        insert_news_into_db(f"data/news/news_{end_date}.csv")
+        _ = insert_news_into_db(f"data/news/news_{end_date}.csv")

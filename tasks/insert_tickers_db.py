@@ -46,4 +46,4 @@ if __name__ == "__main__":
 
     os.makedirs("data/symbols", exist_ok=True)
 
-    insert_ticker_csv_into_db("data/symbols/bursa_stock_list.csv")
+    _ = insert_ticker_csv_into_db("data/symbols/bursa_stock_list.csv")
