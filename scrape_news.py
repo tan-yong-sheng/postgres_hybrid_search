@@ -34,9 +34,6 @@ def scrape_news(start_date=None, end_date=None):
 
     while True:
         # Make a request to the news endpoint
-        print("-------------------")
-        print("start date", start_date)
-        print("End date:", end_date)
         url = f"https://www.klsescreener.com/v2/news/index?until={params.get('until', end_date)}"
         response = make_request(url, cookies={"news.lang": "en"})
         response.raise_for_status()  # Ensure the request was successful
@@ -47,8 +44,6 @@ def scrape_news(start_date=None, end_date=None):
             news = news_item["News"]
             created_date_str = news.get("created")
             created_date = datetime.strptime(created_date_str, "%Y-%m-%d %H:%M:%S")
-            print("created_date", created_date)
-            print("-------------------")
 
             # Stop the scraping logic if created_date is smaller than start_date
             if start_date and created_date < start_date:
@@ -92,8 +87,8 @@ if __name__ == "__main__":
     os.makedirs("data", exist_ok=True)
 
     # Scrape news data for a specific date range
-    start_date = "2022-01-01 00:00:00"
-    end_date = "2022-01-01 23:59:59"
+    start_date = "2022-01-02 00:00:00"
+    end_date = "2022-01-02 23:59:59"
     news_items = scrape_news(start_date=start_date, end_date=end_date)
 
     # Process the yielded news items and write them to a CSV
