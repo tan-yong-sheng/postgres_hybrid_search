@@ -33,6 +33,7 @@ class NewsSchema(BaseModel):
     updated_at: datetime
     title: str
     content: str
+    url: str
 
 
 class NewsCreate(NewsSchema):

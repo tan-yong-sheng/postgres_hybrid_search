@@ -28,21 +28,19 @@ def insert_news_into_db(csv_file_path: str):
     rows = read_csv_file(csv_file_path)
     with db_context() as db_session:
         for row in rows:
-            print(row)
-            news_data = NewsCreate(**row)
             existing_news = check_existing_news(
-                db_session, news_data
+                db_session, row
             )  # ensure there is no duplicate news entry
             if not existing_news:
                 try:
-                    db_session.add(news_data)
+                    news_data_dict = NewsCreate(**row)
+                    news_data_obj = NewsOrm(**news_data_dict.__dict__)
+                    db_session.add(news_data_obj)
                     db_session.commit()
-                    db_session.refresh(news_data)
+                    db_session.refresh(news_data_obj)
                 except ValidationError as e:
                     logger.error("Validation error: ", e)
 
 
 if __name__ == "__main__":
     insert_news_into_db("data/news/news_2022-01-01 23:59:59.csv")
-
-    

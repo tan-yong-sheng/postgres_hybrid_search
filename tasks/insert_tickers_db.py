@@ -31,9 +31,9 @@ def insert_ticker_csv_into_db(csv_file_path: str):
             existing_stock_code = check_existing_ticker(db_session, stock_symbol)
             if not existing_stock_code:
                 try:
-                    stock_symbol = StockSymbolCreate(**row)
-                    stock_symbol = StockSymbolOrm(**stock_symbol.__dict__)
-                    db_session.add(stock_symbol)
+                    stock_symbol_dict = StockSymbolCreate(**row)
+                    stock_symbol_obj = StockSymbolOrm(**stock_symbol_dict.__dict__)
+                    db_session.add(stock_symbol_obj)
                     db_session.commit()
                 except ValidationError as e:
                     logger.error("Validation error: ", e)

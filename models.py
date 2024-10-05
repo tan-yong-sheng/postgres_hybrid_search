@@ -1,14 +1,6 @@
 from pgvector.sqlalchemy import Vector
-from sqlalchemy import (
-    CheckConstraint,
-    Column,
-    Computed,
-    ForeignKey,
-    Index,
-    Text,
-    UniqueConstraint,
-    func,
-)
+from sqlalchemy import (CheckConstraint, Column, Computed, ForeignKey, Index,
+                        Text, UniqueConstraint, func)
 from sqlalchemy.dialects.postgresql import TSVECTOR
 from sqlalchemy.types import DateTime, Integer, String
 
@@ -62,6 +54,7 @@ class NewsOrm(Base):
     )
     title = Column(String(300), nullable=False)
     content = Column(String, nullable=False)
+    url = Column(String, nullable=False)
     embedding = Column(Vector(384), nullable=True)
     fts = Column(
         TSVECTOR(),

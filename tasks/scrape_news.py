@@ -66,13 +66,13 @@ def scrape_news(start_date=None, end_date=None):
 
             # Create a normalized news entry
             normalized_news = {
-                "id": news.get("id"),
                 "title": news.get("title"),
+                "url": f"https://www.klsescreener.com/v2/news/view/{news.get('id')}",
+                "created_at": created_date_str,
+                "updated_at": news.get("modified"),
+                "published_date": news.get("date_post"),
                 "summary": news.get("summary"),
                 "content": content,
-                "created_date": created_date_str,
-                "modified_date": news.get("modified"),
-                "published_date": news.get("date_post"),
                 "category": news.get("category"),
                 "author": news.get("author"),
                 "thumbnail_url": news.get("thumbnail_url"),
