@@ -28,7 +28,8 @@ def insert_news_into_db(csv_file_path: str):
     rows = read_csv_file(csv_file_path)
     with db_context() as db_session:
         for row in rows:
-            news_data = NewsCreate(**rows)
+            print(row)
+            news_data = NewsCreate(**row)
             existing_news = check_existing_news(
                 db_session, news_data
             )  # ensure there is no duplicate news entry
@@ -43,3 +44,5 @@ def insert_news_into_db(csv_file_path: str):
 
 if __name__ == "__main__":
     insert_news_into_db("data/news/news_2022-01-01 23:59:59.csv")
+
+    
