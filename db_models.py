@@ -1,8 +1,17 @@
 from pgvector.sqlalchemy import Vector
-from sqlalchemy import (CheckConstraint, Column, Computed, ForeignKey, Index,
-                        Text, UniqueConstraint, func)
+from sqlalchemy import (
+    CheckConstraint,
+    Column,
+    Computed,
+    ForeignKey,
+    Index,
+    Text,
+    UniqueConstraint,
+    func,
+    text,
+)
 from sqlalchemy.dialects.postgresql import TSVECTOR
-from sqlalchemy.types import DateTime, Integer, String
+from sqlalchemy.types import Boolean, DateTime, Integer, String
 
 from db_connection import Base
 
@@ -75,6 +84,7 @@ class NewsOrm(Base):
         # Create index for keyword-based search (or sparse vector search), executed via `tsvector`
         Index("ix_newschunk_fts___ts_vector__", fts, postgresql_using="gin"),
     )
+    is_ticker_checked = Column(Boolean, default=False, server_default=text("false"))
 
 
 class NewsToStockSymbol(Base):

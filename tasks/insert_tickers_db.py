@@ -4,7 +4,7 @@ from pydantic import ValidationError
 from sqlalchemy.orm import Session
 
 from db_connection import db_context
-from models import StockSymbolOrm
+from db_models import StockSymbolOrm
 from schemas import StockSymbolCreate
 
 logger = logging.getLogger(__name__)

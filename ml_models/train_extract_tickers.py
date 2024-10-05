@@ -1,70 +1,75 @@
 import re
+from pathlib import Path
 
 import spacy
 
 from db_connection import db_context
-from models import NewsOrm, StockSymbolOrm
+from db_models import StockSymbolOrm
+from schemas import ExtractTicker
 
 with db_context() as db_session:
-    company_df = db_session.query(StockSymbolOrm).all()
-    news_df = db_session.query(NewsOrm).all()
-
-# Extract company names, symbols, and stock codes into lists
-companies = company_df["company_name"].to_list()
-symbols = company_df["stock_symbol"].to_list()
-stock_codes = company_df["stock_code"].to_list()
+    stock_symbols = db_session.query(StockSymbolOrm).all()
+    stock_symbols = [
+        ExtractTicker(**stock_symbol.__dict__) for stock_symbol in stock_symbols
+    ]
 
 # Initialize the spaCy pipeline with the entity ruler component
 nlp = spacy.blank("en")
 ruler = nlp.add_pipe("entity_ruler")
 patterns = []
 
-# Add stock code, symbol, and company name patterns to the entity ruler
-for stock_code in stock_codes:
-    patterns.append({"label": "STOCK_CODE", "pattern": stock_code})
-    patterns.append(
-        {"label": "STOCK_CODE", "pattern": [{"TEXT": stock_code}, {"TEXT": ".KL"}]}
-    )
+# Add stock stock_code patterns to the entity ruler
+for item in stock_symbols:
+    patterns.append({"label": "STOCK_CODE", "pattern": item.stock_code})
     patterns.append(
         {
             "label": "STOCK_CODE",
-            "pattern": [{"TEXT": "("}, {"TEXT": stock_code}, {"TEXT": ")"}],
+            "pattern": [{"TEXT": item.stock_code}, {"TEXT": ".KL"}],
         }
     )
     patterns.append(
         {
             "label": "STOCK_CODE",
-            "pattern": [{"TEXT": "(KL:"}, {"TEXT": stock_code}, {"TEXT": ")"}],
+            "pattern": [{"TEXT": "("}, {"TEXT": item.stock_code}, {"TEXT": ")"}],
+        }
+    )
+    patterns.append(
+        {
+            "label": "STOCK_CODE",
+            "pattern": [{"TEXT": "(KL:"}, {"TEXT": item.stock_code}, {"TEXT": ")"}],
         }
     )
 
-for symbol in symbols:
-    patterns.append({"label": "STOCK_SYMBOL", "pattern": symbol})
+    # Add stock symbol patterns to the entity ruler
+    patterns.append({"label": "STOCK_SYMBOL", "pattern": item.stock_symbol})
     patterns.append(
         {
             "label": "STOCK_SYMBOL",
-            "pattern": [{"TEXT": "(KL:"}, {"TEXT": symbol}, {"TEXT": ")"}],
+            "pattern": [{"TEXT": "(KL:"}, {"TEXT": item.stock_symbol}, {"TEXT": ")"}],
         }
     )
     patterns.append(
-        {"label": "STOCK_SYMBOL", "pattern": [{"TEXT": symbol}, {"TEXT": ":MK"}]}
+        {
+            "label": "STOCK_SYMBOL",
+            "pattern": [{"TEXT": item.stock_symbol}, {"TEXT": ":MK"}],
+        }
     )  # Bloomberg
 
-for company in companies:
-    patterns.append({"label": "COMPANY", "pattern": company})
-    patterns.append({"label": "COMPANY", "pattern": company.title()})
+    # Add company name patterns to the entity ruler
+    patterns.append({"label": "COMPANY", "pattern": item.company_name})
+    patterns.append({"label": "COMPANY", "pattern": item.company_name.title()})
 
     # Handle BHD/BERHAD variations
-    bhd_uppercase = re.sub(r"(BERHAD)$", "BHD", company)
+    bhd_uppercase = re.sub(r"(BERHAD)$", "BHD", item.company_name)
     patterns.append({"label": "COMPANY", "pattern": bhd_uppercase})
 
-    berhad_uppercase = re.sub(r"(BHD)$", "BERHAD", company)
+    berhad_uppercase = re.sub(r"(BHD)$", "BERHAD", item.company_name)
     patterns.append({"label": "COMPANY", "pattern": berhad_uppercase})
 
-    bhd_titlecase = re.sub(r"(BHD)$", "BHD", company).title()
+    bhd_titlecase = re.sub(r"(BHD)$", "BHD", item.company_name).title()
     patterns.append({"label": "COMPANY", "pattern": bhd_titlecase})
 
-    berhad_titlecase = re.sub(r"(BHD)$", "BERHAD", company).title()
+    berhad_titlecase = re.sub(r"(BHD)$", "BERHAD", item.company_name).title()
     patterns.append({"label": "COMPANY", "pattern": berhad_titlecase})
 
 ruler.add_patterns(patterns)
@@ -100,10 +105,4 @@ def map_entities_to_stock_codes(text, company_df):
     return matched_dict
 
 
-# Apply the mapping function to the 'long_text' column
-news_df["matched_entities"] = news_df["long_text"].apply(
-    lambda text: map_entities_to_stock_codes(text, company_df)
-)
-
-# The result will be a DataFrame column where each entry is a dictionary mapping the recognized entities to their original stock code or symbol
-news_df[["title", "matched_entities"]]
+nlp.to_disk(path=Path(__file__).parent / "extract_tickers_model")

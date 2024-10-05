@@ -5,7 +5,7 @@ from pydantic import ValidationError
 from sqlalchemy.orm import Session
 
 from db_connection import db_context
-from models import NewsOrm
+from db_models import NewsOrm
 from schemas import NewsCreate
 
 logger = logging.getLogger(__name__)

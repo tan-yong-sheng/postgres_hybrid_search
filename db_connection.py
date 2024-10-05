@@ -1,9 +1,13 @@
+import os
 from contextlib import contextmanager
 
+from dotenv import find_dotenv, load_dotenv
 from sqlalchemy import create_engine
 from sqlalchemy.orm import declarative_base, sessionmaker
 
-DATABASE_URL = "postgresql://postgres:postgres@localhost:5433/stock_analytics"
+_ = load_dotenv(find_dotenv())
+
+DATABASE_URL = os.getenv("DATABASE_URL")
 engine = create_engine(DATABASE_URL, echo=False)
 SessionLocal = sessionmaker(autocommit=False, autoflush=True, bind=engine)
 

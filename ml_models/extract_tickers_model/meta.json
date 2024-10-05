@@ -1,0 +1,35 @@
+{
+  "lang":"en",
+  "name":"pipeline",
+  "version":"0.0.0",
+  "spacy_version":">=3.8.2,<3.9.0",
+  "description":"",
+  "author":"",
+  "email":"",
+  "url":"",
+  "license":"",
+  "spacy_git_version":"63f1b53",
+  "vectors":{
+    "width":0,
+    "vectors":0,
+    "keys":0,
+    "name":null,
+    "mode":"default"
+  },
+  "labels":{
+    "entity_ruler":[
+      "COMPANY",
+      "STOCK_CODE",
+      "STOCK_SYMBOL"
+    ]
+  },
+  "pipeline":[
+    "entity_ruler"
+  ],
+  "components":[
+    "entity_ruler"
+  ],
+  "disabled":[
+
+  ]
+}

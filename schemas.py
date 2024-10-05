@@ -19,6 +19,13 @@ class StockSymbolCreate(StockSymbolSchema):
     pass
 
 
+class ExtractTicker(BaseModel):
+    # specifically used for the train_extract_tickers.py script
+    stock_symbol: str
+    company_name: str
+    stock_code: str
+
+
 class StockSymbolReturn(StockSymbolSchema):
     id: int
 
