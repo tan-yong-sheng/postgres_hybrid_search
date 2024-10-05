@@ -1,4 +1,4 @@
-from datetime import datetime
+from datetime import datetime, timedelta
 
 import pandas as pd
 import requests
@@ -18,6 +18,16 @@ def make_request(url, headers=None, **kwargs):
     if headers:
         default_headers.update(headers)
     return http_session.get(url, headers=default_headers, cookies=kwargs.get("cookies"))
+
+
+# Function to generate date ranges
+def generate_date_ranges(start_date, end_date, delta_days=1):
+    current_date = start_date
+    while current_date <= end_date:
+        start = current_date
+        end = current_date + timedelta(days=delta_days) - timedelta(seconds=1)
+        yield start.strftime("%Y-%m-%d %H:%M:%S"), end.strftime("%Y-%m-%d %H:%M:%S")
+        current_date += timedelta(days=delta_days)
 
 
 # Define a function to scrape news data from the KLSE screener website
@@ -78,7 +88,7 @@ def scrape_news(start_date=None, end_date=None):
         if "paging" in news_data and "until" in news_data["paging"]:
             params["until"] = news_data["paging"]["until"]
         else:
-            break  # Stop if no more paging data is available
+            return  # Stop the generator if no more paging data is available
 
 
 if __name__ == "__main__":
@@ -86,10 +96,14 @@ if __name__ == "__main__":
 
     os.makedirs("data", exist_ok=True)
 
-    # Scrape news data for a specific date range
-    start_date = "2022-01-02 00:00:00"
-    end_date = "2022-01-02 23:59:59"
-    news_items = scrape_news(start_date=start_date, end_date=end_date)
+    # Define the overall date range
+    overall_start_date = datetime.strptime("2022-01-01 00:00:00", "%Y-%m-%d %H:%M:%S")
+    overall_end_date = datetime.strptime("2022-01-05 23:59:59", "%Y-%m-%d %H:%M:%S")
 
-    # Process the yielded news items and write them to a CSV
-    pd.DataFrame(news_items).to_csv(f"data/news/news_{end_date}.csv")
+    # Loop over each date range and scrape news data
+    for start_date, end_date in generate_date_ranges(
+        overall_start_date, overall_end_date
+    ):
+        news_items = scrape_news(start_date=start_date, end_date=end_date)
+        # Process the yielded news items and write them to a CSV
+        pd.DataFrame(news_items).to_csv(f"data/news/news_{end_date}.csv")
