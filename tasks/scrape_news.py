@@ -1,4 +1,4 @@
-from datetime import datetime, timedelta
+from datetime import datetime
 
 import pandas as pd
 import requests
@@ -18,16 +18,6 @@ def make_request(url, headers=None, **kwargs):
     if headers:
         default_headers.update(headers)
     return http_session.get(url, headers=default_headers, cookies=kwargs.get("cookies"))
-
-
-# Function to generate date ranges
-def generate_date_ranges(start_date, end_date, delta_days=1):
-    current_date = start_date
-    while current_date <= end_date:
-        start = current_date
-        end = current_date + timedelta(days=delta_days) - timedelta(seconds=1)
-        yield start.strftime("%Y-%m-%d %H:%M:%S"), end.strftime("%Y-%m-%d %H:%M:%S")
-        current_date += timedelta(days=delta_days)
 
 
 # Define a function to scrape news data from the KLSE screener website
@@ -99,6 +89,8 @@ if __name__ == "__main__":
     # Define the overall date range
     overall_start_date = datetime.strptime("2022-01-01 00:00:00", "%Y-%m-%d %H:%M:%S")
     overall_end_date = datetime.strptime("2022-01-05 23:59:59", "%Y-%m-%d %H:%M:%S")
+
+    from utils.date_handler import generate_date_ranges
 
     # Loop over each date range and scrape news data
     for start_date, end_date in generate_date_ranges(

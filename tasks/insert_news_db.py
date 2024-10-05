@@ -1,4 +1,5 @@
 import logging
+from datetime import datetime
 
 from pydantic import ValidationError
 from sqlalchemy.orm import Session
@@ -43,4 +44,15 @@ def insert_news_into_db(csv_file_path: str):
 
 
 if __name__ == "__main__":
-    insert_news_into_db("data/news/news_2022-01-01 23:59:59.csv")
+    from utils.date_handler import generate_date_ranges
+
+    # Define the overall date range
+    overall_start_date = datetime.strptime("2022-01-01 00:00:00", "%Y-%m-%d %H:%M:%S")
+    overall_end_date = datetime.strptime("2022-01-05 23:59:59", "%Y-%m-%d %H:%M:%S")
+
+    # Loop over each date range and scrape news data
+    for start_date, end_date in generate_date_ranges(
+        overall_start_date, overall_end_date
+    ):
+        
+        insert_news_into_db(f"data/news/news_{end_date}.csv")
