@@ -33,6 +33,10 @@ class NewsToStockSymbolCreate(NewsToStockSymbolSchema):
     pass
 
 
+class NewsToStockSymbolReturn(NewsToStockSymbolSchema):
+    id: int
+
+
 class NewsSchema(BaseModel):
     created_at: datetime
     updated_at: datetime

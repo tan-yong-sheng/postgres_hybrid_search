@@ -1,6 +1,6 @@
 from typing import Literal
 
-from sqlalchemy.sql.expression import false
+from sqlalchemy.sql.expression import desc, false
 
 from db_connection import db_context
 from db_models import NewsOrm, StockSymbolOrm
@@ -17,12 +17,19 @@ def extract_financial_entities_from_news_db():
         for news in news_content_without_ticker_checked:
             financial_entities_matches = extract_financial_entities(news.content)
 
-            for match in financial_entities_matches:
+            if not financial_entities_matches:
                 yield {
                     "news_id": news.id,
-                    "entity_name": match["entity_name"],
-                    "entity_type": match["entity_type"],
+                    "entity_name": None,
+                    "entity_type": None,
                 }
+            else:
+                for match in financial_entities_matches:
+                    yield {
+                        "news_id": news.id,
+                        "entity_name": match["entity_name"],
+                        "entity_type": match["entity_type"],
+                    }
 
 
 def perform_trigram_search_on_financial_entities(
@@ -40,33 +47,12 @@ def perform_trigram_search_on_financial_entities(
             similarity_condition &= StockSymbolOrm.company_name.op("%")(entity_name)
 
         result = (
-            db_session.query(StockSymbolOrm.id).filter(similarity_condition).first()
+            db_session.query(StockSymbolOrm.id)
+            .filter(similarity_condition)
+            .order_by(desc(similarity_condition))
+            .first()
         )
         if result is not None:
             yield {"stock_id": result.id}
         else:
             yield {"stock_id": None}
-
-
-if __name__ == "__main__":
-    import time
-
-    start = time.time()
-
-    news_items = extract_financial_entities_from_news_db()
-
-    for item in news_items:
-        stock_ids = perform_trigram_search_on_financial_entities(
-            exchange_market="Bursa",
-            entity_name=item["entity_name"],
-            entity_type=item["entity_type"],
-        )
-
-        print("News id:", item["news_id"])
-        for stock_id in stock_ids:
-            print("Stock code:", stock_id["stock_id"])
-        print("---------------------------")
-
-    end = time.time()
-
-    print("Time taken: ", end - start, " seconds")
