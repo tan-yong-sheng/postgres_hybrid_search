@@ -20,15 +20,12 @@ class StockSymbolCreate(StockSymbolSchema):
     pass
 
 
-class ExtractTicker(BaseModel):
-    # specifically used for the train_extract_tickers.py script
-    stock_symbol: str
-    company_name: str
-    stock_code: str
-
-
 class StockSymbolReturn(StockSymbolSchema):
     id: int
+
+
+class StockCodeReturn(BaseModel):
+    stock_code: str
 
 
 class NewsToStockSymbolSchema(BaseModel):
@@ -51,3 +48,14 @@ class NewsCreate(NewsSchema):
 class NewsReturn(NewsSchema):
     id: int
 
+
+class ExtractTicker(BaseModel):
+    # specifically used for the train_extract_tickers.py script
+    stock_symbol: str
+    company_name: str
+    stock_code: str
+
+
+class ExchangeSchema(str, Enum):
+    bursa = "Bursa"
+    sgx = "SGX"
