@@ -56,3 +56,21 @@ def perform_trigram_search_on_financial_entities(
             yield {"stock_id": result.id}
         else:
             yield {"stock_id": None}
+
+
+if __name__ == "__main__":
+    news_items = extract_financial_entities_from_news_db()
+
+    for item in news_items:
+        stock_ids = perform_trigram_search_on_financial_entities(
+            exchange_market="Bursa",
+            entity_name=item["entity_name"],
+            entity_type=item["entity_type"],
+        )
+
+        print(
+            {
+                "news_id": item["news_id"],
+                "stock_id": [stock_id["stock_id"] for stock_id in stock_ids][0],
+            }
+        )
