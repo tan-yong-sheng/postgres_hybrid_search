@@ -1,0 +1,29 @@
+Table StockSymbolOrm {
+  id SERIAL [pk, increment]
+  stock_symbol VARCHAR
+  company_name VARCHAR
+  stock_code VARCHAR
+  sector VARCHAR
+  subsector VARCHAR
+  mkt VARCHAR
+  exchange VARCHAR
+  company_description VARCHAR
+}
+
+Table NewsToStockSymbol {
+  id SERIAL [pk, increment]
+  stock_symbol_id INTEGER [ref: > StockSymbolOrm.id]
+  news_id INTEGER [ref: > NewsOrm.id]
+}
+
+Table NewsOrm {
+  id SERIAL [pk, increment]
+  created_at TIMESTAMP
+  updated_at TIMESTAMP
+  title VARCHAR(300)
+  content VARCHAR
+  url VARCHAR(200)
+  embedding VECTOR(384)
+  fts TSVECTOR
+  is_ticker_checked BOOLEAN [default: false]
+}

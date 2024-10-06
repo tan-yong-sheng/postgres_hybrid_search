@@ -1,4 +1,5 @@
 from datetime import datetime
+from typing import Optional
 
 import pandas as pd
 import requests
@@ -21,7 +22,7 @@ def make_request(url, headers=None, **kwargs):
 
 
 # Define a function to scrape news data from the KLSE screener website
-def scrape_news(start_date=None, end_date=None):
+def scrape_news(start_date: Optional[str] = None, end_date: Optional[str] = None):
     params = {}
 
     # Convert start_date to a datetime object if provided
