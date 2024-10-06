@@ -12,21 +12,73 @@ def label_stock_code(label: str, text: str):
     return [
         {
             "label": label,
-            "pattern": [{"TEXT": "("}, {"LOWER": text}, {"TEXT": ")"}],
-        },
-        {"label": label, "pattern": [{"LOWER": text}]},
-        {"label": label, "pattern": [{"LOWER": f"{text}.kl"}]},
-        {"label": label, "pattern": [{"LOWER": f"{text}.kls"}]},
-        {"label": label, "pattern": [{"LOWER": f"{text}.klse"}]},
-        {"label": label, "pattern": [{"LOWER": f"{text}.my"}]},
-        {"label": label, "pattern": [{"LOWER": "kl"}, {"TEXT": ":"}, {"LOWER": text}]},
-        {
-            "label": label,
-            "pattern": [{"LOWER": "kls:"}, {"TEXT": ":"}, {"LOWER": text}],
+            "pattern": [
+                {"TEXT": "(", "OP": "*"},
+                {"LOWER": text},
+                {"TEXT": ")", "OP": "*"},
+            ],
         },
         {
             "label": label,
-            "pattern": [{"LOWER": "klse:"}, {"TEXT": ":"}, {"LOWER": text}],
+            "pattern": [
+                {"TEXT": "(", "OP": "*"},
+                {"LOWER": f"{text}.kl"},
+                {"TEXT": ")", "OP": "*"},
+            ],
+        },
+        {
+            "label": label,
+            "pattern": [
+                {"TEXT": "(", "OP": "*"},
+                {"LOWER": f"{text}.kls"},
+                {"TEXT": ")", "OP": "*"},
+            ],
+        },
+        {
+            "label": label,
+            "pattern": [
+                {"TEXT": "(", "OP": "*"},
+                {"LOWER": f"{text}.klse"},
+                {"TEXT": ")", "OP": "*"},
+            ],
+        },
+        {
+            "label": label,
+            "pattern": [
+                {"TEXT": "(", "OP": "*"},
+                {"LOWER": f"{text}.my"},
+                {"TEXT": ")", "OP": "*"},
+            ],
+        },
+        {
+            "label": label,
+            "pattern": [
+                {"TEXT": "(", "OP": "*"},
+                {"LOWER": "kl"},
+                {"TEXT": ":"},
+                {"LOWER": text},
+                {"TEXT": ")", "OP": "*"},
+            ],
+        },
+        {
+            "label": label,
+            "pattern": [
+                {"TEXT": "(", "OP": "*"},
+                {"LOWER": "kls:"},
+                {"TEXT": ":"},
+                {"LOWER": text},
+                {"TEXT": ")", "OP": "*"},
+            ],
+        },
+        {
+            "label": label,
+            "pattern": [
+                {"TEXT": "(", "OP": "*"},
+                {"LOWER": "klse:"},
+                {"TEXT": ":"},
+                {"LOWER": text},
+                {"TEXT": ")", "OP": "*"},
+            ],
         },
     ]
 
@@ -40,27 +92,57 @@ def label_stock_symbol(label: str, text: str):
         },
         {
             "label": label,
-            "pattern": [{"LOWER": f"{text}.kl"}],
+            "pattern": [
+                {"TEXT": "(", "OP": "*"},
+                {"LOWER": f"{text}.kl"},
+                {"TEXT": ")", "OP": "*"},
+            ],
         },
         {
             "label": label,
-            "pattern": [{"LOWER": f"{text}.kls"}],
+            "pattern": [
+                {"TEXT": "(", "OP": "*"},
+                {"LOWER": f"{text}.kls"},
+                {"TEXT": ")", "OP": "*"},
+            ],
         },
         {
             "label": label,
-            "pattern": [{"LOWER": f"{text}.my"}],
+            "pattern": [
+                {"TEXT": "(", "OP": "*"},
+                {"LOWER": f"{text}.my"},
+                {"TEXT": ")", "OP": "*"},
+            ],
         },
         {
             "label": label,
-            "pattern": [{"LOWER": "kl"}, {"TEXT": ":"}, {"LOWER": text}],
+            "pattern": [
+                {"TEXT": "(", "OP": "*"},
+                {"LOWER": "kl"},
+                {"TEXT": ":"},
+                {"LOWER": text},
+                {"TEXT": ")", "OP": "*"},
+            ],
         },
         {
             "label": label,
-            "pattern": [{"LOWER": "kls"}, {"TEXT": ":"}, {"LOWER": text}],
+            "pattern": [
+                {"TEXT": "(", "OP": "*"},
+                {"LOWER": "kls"},
+                {"TEXT": ":"},
+                {"LOWER": text},
+                {"TEXT": ")", "OP": "*"},
+            ],
         },
         {
             "label": label,
-            "pattern": [{"LOWER": "klse"}, {"TEXT": ":"}, {"LOWER": text}],
+            "pattern": [
+                {"TEXT": "(", "OP": "*"},
+                {"LOWER": "klse"},
+                {"TEXT": ":"},
+                {"LOWER": text},
+                {"TEXT": ")", "OP": "*"},
+            ],
         },
     ]
 
