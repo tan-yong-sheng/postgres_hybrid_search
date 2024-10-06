@@ -4,7 +4,7 @@ import spacy
 nlp = spacy.load("ml_models/extract_tickers_model")
 
 
-def extract_financial_entities(text: str):
+def extract_financial_entities(text: str) -> list[dict[str, str]]:
     doc = nlp(text)
     financial_entities = []
     for ent in doc.ents:

@@ -24,13 +24,13 @@ class StockSymbolReturn(StockSymbolSchema):
     id: int
 
 
-class StockCodeReturn(BaseModel):
-    stock_code: str
-
-
 class NewsToStockSymbolSchema(BaseModel):
     news_id: int
     stock_symbol_id: int
+
+
+class NewsToStockSymbolCreate(NewsToStockSymbolSchema):
+    pass
 
 
 class NewsSchema(BaseModel):
