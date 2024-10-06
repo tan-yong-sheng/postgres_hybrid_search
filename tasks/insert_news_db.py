@@ -11,7 +11,7 @@ from schemas import NewsCreate
 logger = logging.getLogger(__name__)
 
 
-def check_existing_news(db: Session, news: dict):
+def check_existing_news(db: Session, news: NewsCreate):
     existing_news = (
         db.query(NewsOrm)
         .filter(

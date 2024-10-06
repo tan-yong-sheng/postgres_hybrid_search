@@ -1,4 +1,5 @@
 from datetime import datetime
+from enum import Enum
 from typing import Optional
 
 from pydantic import BaseModel
@@ -50,12 +51,3 @@ class NewsCreate(NewsSchema):
 class NewsReturn(NewsSchema):
     id: int
 
-
-class NewsChunksSchema(BaseModel):
-    chunk_content: str
-    news_id: int
-    embedding: list[float]
-
-
-class NewsChunksReturn(NewsChunksSchema):
-    id: int

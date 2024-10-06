@@ -69,20 +69,21 @@ class NewsOrm(Base):
         TSVECTOR(),
         Computed("to_tsvector('english', content)", persisted=True),
     )
+    is_ticker_checked = Column(Boolean, default=False, server_default=text("false"))
 
     __table_args__ = (
         UniqueConstraint("created_at", "title", name="uq_news_createdat_title"),
         CheckConstraint("LENGTH(title)>0", name="check_title_length"),
         CheckConstraint("LENGTH(content)>0", name="check_content_length"),
         Index(
-            "hnsw_idx_news_chunks_trgm",
+            "hnsw_idx_news_content_trgm",
             embedding,
             postgresql_using="hnsw",
             postgresql_with={"m": 16, "ef_construction": 64},
             postgresql_ops={"embedding": "vector_cosine_ops"},
         ),
         # Create index for keyword-based search (or sparse vector search), executed via `tsvector`
-        Index("ix_newschunk_fts___ts_vector__", fts, postgresql_using="gin"),
+        Index("ix_news_fts___ts_vector__", fts, postgresql_using="gin"),
     )
     is_ticker_checked = Column(Boolean, default=False, server_default=text("false"))
 
