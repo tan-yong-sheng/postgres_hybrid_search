@@ -8,8 +8,10 @@ from schemas import ExtractTicker
 
 
 def label_stock_code(label: str, text: str):
+    # Assuming stock code is 4715
     text = text.lower()
     return [
+        ## match (4715)
         {
             "label": label,
             "pattern": [
@@ -18,6 +20,7 @@ def label_stock_code(label: str, text: str):
                 {"TEXT": ")", "OP": "*"},
             ],
         },
+        ## match (4715.KL) or (4715.kl) or (4715.Kl) or 4715.KL or 4715.kl or 4715.Kl
         {
             "label": label,
             "pattern": [
@@ -26,6 +29,7 @@ def label_stock_code(label: str, text: str):
                 {"TEXT": ")", "OP": "*"},
             ],
         },
+        ## match (4715.KLS) or (4715.kls) or (4715.Kls) or 4715.KLS or 4715.kls or 4715.Kls
         {
             "label": label,
             "pattern": [
@@ -34,6 +38,7 @@ def label_stock_code(label: str, text: str):
                 {"TEXT": ")", "OP": "*"},
             ],
         },
+        ## match (4715.KLSE) or (4715.klse) or (4715.Klse) or 4715.KLSE or 4715.klse or 4715.Klse
         {
             "label": label,
             "pattern": [
@@ -42,6 +47,7 @@ def label_stock_code(label: str, text: str):
                 {"TEXT": ")", "OP": "*"},
             ],
         },
+        ## match (4715.MY) or (4715.my) or (4715.My) or 4715.MY or 4715.my or 4715.My
         {
             "label": label,
             "pattern": [
@@ -50,33 +56,30 @@ def label_stock_code(label: str, text: str):
                 {"TEXT": ")", "OP": "*"},
             ],
         },
+        ## match (KL:4715) or (kl:4715) or (Kl:4715) or KL:4715 or kl:4715 or Kl:4715
         {
             "label": label,
             "pattern": [
                 {"TEXT": "(", "OP": "*"},
-                {"LOWER": "kl"},
-                {"TEXT": ":"},
-                {"LOWER": text},
+                {"LOWER": f"kl:{text}"},
                 {"TEXT": ")", "OP": "*"},
             ],
         },
+        ## match (KLS:4715) or (kls:4715) or (Kls:4715) or KLS:4715 or kls:4715 or Kls:4715
         {
             "label": label,
             "pattern": [
                 {"TEXT": "(", "OP": "*"},
-                {"LOWER": "kls:"},
-                {"TEXT": ":"},
-                {"LOWER": text},
+                {"LOWER": f"kls:{text}"},
                 {"TEXT": ")", "OP": "*"},
             ],
         },
+        ## match (KLSE:4715) or (klse:4715) or (Klse:4715) or KLSE:4715 or klse:4715 or Klse:4715
         {
             "label": label,
             "pattern": [
                 {"TEXT": "(", "OP": "*"},
-                {"LOWER": "klse:"},
-                {"TEXT": ":"},
-                {"LOWER": text},
+                {"LOWER": f"klse:{text}"},
                 {"TEXT": ")", "OP": "*"},
             ],
         },
@@ -84,46 +87,75 @@ def label_stock_code(label: str, text: str):
 
 
 def label_stock_symbol(label: str, text: str):
+    # assuming we want to recognize this stock ticker called GENM
     text = text.lower()
     return [
+        ## match (GENM) or (genm)
         {
             "label": label,
-            "pattern": [{"TEXT": "("}, {"LOWER": text}, {"TEXT": ")"}],
+            "pattern": [{"ORTH": "("}, {"LOWER": text}, {"ORTH": ")"}],
         },
+        ## match (GENM.KL) or (genm.kl) or GENM.KL or genm.kl
         {
             "label": label,
             "pattern": [
-                {"TEXT": "(", "OP": "*"},
+                {"ORTH": "(", "OP": "*"},
                 {"LOWER": f"{text}.kl"},
-                {"TEXT": ")", "OP": "*"},
+                {"ORTH": ")", "OP": "*"},
             ],
         },
+        ## match (Genm.KL) or (genm.KL) or Genm.KL or genm.KL
         {
             "label": label,
             "pattern": [
-                {"TEXT": "(", "OP": "*"},
-                {"LOWER": f"{text}.kls"},
-                {"TEXT": ")", "OP": "*"},
-            ],
-        },
-        {
-            "label": label,
-            "pattern": [
-                {"TEXT": "(", "OP": "*"},
-                {"LOWER": f"{text}.my"},
-                {"TEXT": ")", "OP": "*"},
-            ],
-        },
-        {
-            "label": label,
-            "pattern": [
-                {"TEXT": "(", "OP": "*"},
-                {"LOWER": "kl"},
-                {"TEXT": ":"},
+                {"ORTH": "(", "OP": "*"},
                 {"LOWER": text},
-                {"TEXT": ")", "OP": "*"},
+                {"ORTH": "."},
+                {"LOWER": "kl"},
+                {"ORTH": ")", "OP": "*"},
             ],
         },
+        ## match (GENM.KLS) or (genm.kls) or GENM.KLS or genm.kls
+        {
+            "label": label,
+            "pattern": [
+                {"ORTH": "(", "OP": "*"},
+                {"LOWER": f"{text}.kls"},
+                {"ORTH": ")", "OP": "*"},
+            ],
+        },
+        ## match (Genm.KLS) or (genm.KLS) or Genm.KLS or genm.KLS
+        {
+            "label": label,
+            "pattern": [
+                {"ORTH": "(", "OP": "*"},
+                {"LOWER": text},
+                {"ORTH": "."},
+                {"LOWER": "kls"},
+                {"ORTH": ")", "OP": "*"},
+            ],
+        },
+        ## match (GENM.MY) or (genm.my) or GENM.MY or genm.my
+        {
+            "label": label,
+            "pattern": [
+                {"ORTH": "(", "OP": "*"},
+                {"LOWER": f"{text}.my"},
+                {"ORTH": ")", "OP": "*"},
+            ],
+        },
+        ## match (Genm.MY) or (genm.MY) or Genm.MY or genm.MY
+        {
+            "label": label,
+            "pattern": [
+                {"ORTH": "(", "OP": "*"},
+                {"LOWER": text},
+                {"ORTH": "."},
+                {"LOWER": "my"},
+                {"ORTH": ")", "OP": "*"},
+            ],
+        },
+        ## match (KLS:GENM) or (kls:genm) or (KLS:genm) or KLS:GENM or kls:genm or KLS:genm
         {
             "label": label,
             "pattern": [
@@ -134,6 +166,7 @@ def label_stock_symbol(label: str, text: str):
                 {"TEXT": ")", "OP": "*"},
             ],
         },
+        ## match (KLSE:GENM) or (klse:genm) or (KLSE:genm) or KLSE:GENM or klse:genm or KLSE:genm
         {
             "label": label,
             "pattern": [
