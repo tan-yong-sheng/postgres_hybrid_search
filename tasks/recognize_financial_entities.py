@@ -1,3 +1,4 @@
+import logging
 from typing import Literal
 
 from sqlalchemy.sql.expression import desc, false
@@ -7,12 +8,20 @@ from db_models import NewsOrm, StockSymbolOrm
 from schemas import ExchangeSchema
 from utils.nlp_handler import extract_financial_entities
 
+logger = logging.getLogger(__name__)
+
 
 def extract_financial_entities_from_news_db():
     with db_context() as db_session:
         news_content_without_ticker_checked = (
             db_session.query(NewsOrm).filter(NewsOrm.is_ticker_checked == false()).all()
         )
+
+        if not news_content_without_ticker_checked:
+            logger.info(
+                "No news content to be processed to get stock symbols, stock code or company names"
+            )
+            return
 
         for news in news_content_without_ticker_checked:
             financial_entities_matches = extract_financial_entities(news.content)
