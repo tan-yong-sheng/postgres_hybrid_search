@@ -31127,3 +31127,12 @@
 {"label":"COMPANY_NAME","pattern":[{"LOWER":"airasia"},{"LOWER":"group"},{"LOWER":"bhd"}]}
 {"label":"COMPANY_NAME","pattern":[{"LOWER":"airasia"},{"LOWER":"group"},{"LOWER":"berhad"}]}
 {"label":"COMPANY_NAME","pattern":[{"LOWER":"airasia"},{"LOWER":"group"},{"LOWER":"bhd"}]}
+{"label":"COMPANY_NAME","pattern":[{"LOWER":"opcom"},{"LOWER":"holdings"},{"LOWER":"bhd"}]}
+{"label":"COMPANY_NAME","pattern":[{"LOWER":"opcom"},{"LOWER":"holdings"},{"LOWER":"berhad"}]}
+{"label":"COMPANY_NAME","pattern":[{"LOWER":"opcom"},{"LOWER":"holdings"},{"LOWER":"bhd"}]}
+{"label":"COMPANY_NAME","pattern":[{"LOWER":"opcom"},{"LOWER":"holdings"},{"LOWER":"bhd"}]}
+{"label":"COMPANY_NAME","pattern":[{"LOWER":"opcom"},{"LOWER":"holdings"},{"LOWER":"bhd"}]}
+{"label":"COMPANY_NAME","pattern":[{"LOWER":"opcom"},{"LOWER":"holdings"},{"LOWER":"berhad"}]}
+{"label":"COMPANY_NAME","pattern":[{"LOWER":"opcom"},{"LOWER":"holdings"},{"LOWER":"bhd"}]}
+{"label":"COMPANY_NAME","pattern":[{"LOWER":"opcom"},{"LOWER":"holdings"},{"LOWER":"berhad"}]}
+{"label":"COMPANY_NAME","pattern":[{"LOWER":"opcom"},{"LOWER":"holdings"},{"LOWER":"bhd"}]}
