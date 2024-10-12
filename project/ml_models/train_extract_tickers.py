@@ -245,6 +245,12 @@ with db_context() as db_session:
         patterns += label_stock_symbol("STOCK_SYMBOL", item.stock_symbol)
         patterns += label_company_name("COMPANY_NAME", item.company_name)
 
+    # Add patterns for AirAsia Group Berhad, it's alternative company name to CAPITAL A BERHAD (5099.KL)
+    # try to match old company name to new company name
+    # Note: https://www.bursamalaysia.com/api/v1/announcements/search?ann_type=company&company=&keyword=&dt_ht=&dt_lt=&cat=CI%2CCOCI&sub_type=CI5%2CCHAN&mkt=&sec=&subsec=&per_page=20&page=1&_=1728706761625
+    patterns += label_company_name("COMPANY_NAME", "AIRASIA GROUP BERHAD")
+    patterns += label_company_name("COMPANY_NAME", "OPCOM HOLDINGS BHD")
+
     # Add all patterns to the entity ruler
     ruler.add_patterns(patterns)
 

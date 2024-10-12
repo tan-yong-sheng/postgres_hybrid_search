@@ -31118,3 +31118,12 @@
 {"label":"COMPANY_NAME","pattern":[{"LOWER":"zenworld"},{"LOWER":"holdings"},{"LOWER":"bhd"}]}
 {"label":"COMPANY_NAME","pattern":[{"LOWER":"zenworld"},{"LOWER":"holdings"},{"LOWER":"berhad"}]}
 {"label":"COMPANY_NAME","pattern":[{"LOWER":"zenworld"},{"LOWER":"holdings"},{"LOWER":"bhd"}]}
+{"label":"COMPANY_NAME","pattern":[{"LOWER":"airasia"},{"LOWER":"group"},{"LOWER":"berhad"}]}
+{"label":"COMPANY_NAME","pattern":[{"LOWER":"airasia"},{"LOWER":"group"},{"LOWER":"berhad"}]}
+{"label":"COMPANY_NAME","pattern":[{"LOWER":"airasia"},{"LOWER":"group"},{"LOWER":"bhd"}]}
+{"label":"COMPANY_NAME","pattern":[{"LOWER":"airasia"},{"LOWER":"group"},{"LOWER":"berhad"}]}
+{"label":"COMPANY_NAME","pattern":[{"LOWER":"airasia"},{"LOWER":"group"},{"LOWER":"berhad"}]}
+{"label":"COMPANY_NAME","pattern":[{"LOWER":"airasia"},{"LOWER":"group"},{"LOWER":"berhad"}]}
+{"label":"COMPANY_NAME","pattern":[{"LOWER":"airasia"},{"LOWER":"group"},{"LOWER":"bhd"}]}
+{"label":"COMPANY_NAME","pattern":[{"LOWER":"airasia"},{"LOWER":"group"},{"LOWER":"berhad"}]}
+{"label":"COMPANY_NAME","pattern":[{"LOWER":"airasia"},{"LOWER":"group"},{"LOWER":"bhd"}]}
