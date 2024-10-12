@@ -1,0 +1,578 @@
+{'news_id': 2, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 533, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 456, 'stock_id': 103, 'exchange': 'Bursa', 'entity_type': 'COMPANY_NAME', 'entity_name': 'AXIATA GROUP', 'stock_symbol': 'AXIATA', 'company_name': 'AXIATA GROUP BERHAD'}
+{'news_id': 247, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 439, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 3, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 351, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 364, 'stock_id': 866, 'exchange': 'Bursa', 'entity_type': 'COMPANY_NAME', 'entity_name': 'POH KONG HOLDINGS', 'stock_symbol': 'POHKONG', 'company_name': 'POH KONG HOLDINGS BHD'}
+{'news_id': 176, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 42, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 397, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 446, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 172, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 519, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 449, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 14, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 531, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 93, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 59, 'stock_id': None, 'exchange': None, 'entity_type': 'STOCK_SYMBOL', 'entity_name': 'SCIB', 'stock_symbol': None, 'company_name': None}
+{'news_id': 59, 'stock_id': None, 'exchange': None, 'entity_type': 'STOCK_SYMBOL', 'entity_name': 'MYEG', 'stock_symbol': None, 'company_name': None}
+{'news_id': 59, 'stock_id': 351, 'exchange': 'Bursa', 'entity_type': 'COMPANY_NAME', 'entity_name': 'FGV HOLDINGS', 'stock_symbol': 'FGV', 'company_name': 'FGV HOLDINGS BERHAD'}
+{'news_id': 59, 'stock_id': 839, 'exchange': 'Bursa', 'entity_type': 'COMPANY_NAME', 'entity_name': 'PETRONAS DAGANGAN', 'stock_symbol': 'PETDAG', 'company_name': 'PETRONAS DAGANGAN BHD'}
+{'news_id': 59, 'stock_id': 1181, 'exchange': 'Bursa', 'entity_type': 'COMPANY_NAME', 'entity_name': 'WESTPORTS HOLDINGS', 'stock_symbol': 'WPRTS', 'company_name': 'WESTPORTS HOLDINGS BERHAD'}
+{'news_id': 59, 'stock_id': 90, 'exchange': 'Bursa', 'entity_type': 'COMPANY_NAME', 'entity_name': 'ATA IMS', 'stock_symbol': 'ATAIMS', 'company_name': 'ATA IMS BERHAD'}
+{'news_id': 59, 'stock_id': 87, 'exchange': 'Bursa', 'entity_type': 'COMPANY_NAME', 'entity_name': 'ASTINO', 'stock_symbol': 'ASTINO', 'company_name': 'ASTINO BHD'}
+{'news_id': 59, 'stock_id': 736, 'exchange': 'Bursa', 'entity_type': 'COMPANY_NAME', 'entity_name': 'MALAYAN UNITED INDUSTRIES', 'stock_symbol': 'MUIIND', 'company_name': 'MALAYAN UNITED INDUSTRIES BHD'}
+{'news_id': 59, 'stock_id': 944, 'exchange': 'Bursa', 'entity_type': 'COMPANY_NAME', 'entity_name': 'SC ESTATE BUILDER', 'stock_symbol': 'SCBUILD', 'company_name': 'SC ESTATE BUILDER BERHAD'}
+{'news_id': 59, 'stock_id': None, 'exchange': None, 'entity_type': 'STOCK_SYMBOL', 'entity_name': 'SCBUILD', 'stock_symbol': None, 'company_name': None}
+{'news_id': 152, 'stock_id': 201, 'exchange': 'Bursa', 'entity_type': 'COMPANY_NAME', 'entity_name': 'CIMB GROUP HOLDINGS', 'stock_symbol': 'CIMB', 'company_name': 'CIMB GROUP HOLDINGS BERHAD'}
+{'news_id': 362, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 328, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 150, 'stock_id': 90, 'exchange': 'Bursa', 'entity_type': 'COMPANY_NAME', 'entity_name': 'ATA IMS', 'stock_symbol': 'ATAIMS', 'company_name': 'ATA IMS BERHAD'}
+{'news_id': 421, 'stock_id': 749, 'exchange': 'Bursa', 'entity_type': 'COMPANY_NAME', 'entity_name': 'NCT ALLIANCE', 'stock_symbol': 'NCT', 'company_name': 'NCT ALLIANCE BERHAD'}
+{'news_id': 8, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 365, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 256, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 36, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 249, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 288, 'stock_id': 373, 'exchange': 'Bursa', 'entity_type': 'COMPANY_NAME', 'entity_name': 'G3 GLOBAL', 'stock_symbol': 'G3', 'company_name': 'G3 GLOBAL BERHAD'}
+{'news_id': 394, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 276, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 323, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 539, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 336, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 458, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 338, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 149, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 220, 'stock_id': 1200, 'exchange': 'Bursa', 'entity_type': 'COMPANY_NAME', 'entity_name': 'YINSON HOLDINGS', 'stock_symbol': 'YINSON', 'company_name': 'YINSON HOLDINGS BHD'}
+{'news_id': 370, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 463, 'stock_id': 604, 'exchange': 'Bursa', 'entity_type': 'COMPANY_NAME', 'entity_name': 'LBS BINA GROUP', 'stock_symbol': 'LBS', 'company_name': 'LBS BINA GROUP BHD'}
+{'news_id': 7, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 341, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 460, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 80, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 221, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 485, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 242, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 202, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 504, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 259, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 330, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 472, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 144, 'stock_id': 976, 'exchange': 'Bursa', 'entity_type': 'COMPANY_NAME', 'entity_name': 'SERBA DINAMIK HOLDINGS', 'stock_symbol': 'SERBADK', 'company_name': 'SERBA DINAMIK HOLDINGS BERHAD'}
+{'news_id': 241, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 171, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 207, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 280, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 310, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 136, 'stock_id': 154, 'exchange': 'Bursa', 'entity_type': 'COMPANY_NAME', 'entity_name': 'BOUSTEAD HOLDINGS', 'stock_symbol': 'BSTEAD', 'company_name': 'BOUSTEAD HOLDINGS BHD'}
+{'news_id': 205, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 234, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 137, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 473, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 56, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 360, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 125, 'stock_id': 451, 'exchange': 'Bursa', 'entity_type': 'COMPANY_NAME', 'entity_name': 'HONG SENG CONSOLIDATED', 'stock_symbol': 'HONGSENG', 'company_name': 'HONG SENG CONSOLIDATED BERHAD'}
+{'news_id': 154, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 110, 'stock_id': 807, 'exchange': 'Bursa', 'entity_type': 'COMPANY_NAME', 'entity_name': 'PANTECH GROUP HOLDINGS', 'stock_symbol': 'PANTECH', 'company_name': 'PANTECH GROUP HOLDINGS BHD'}
+{'news_id': 287, 'stock_id': 373, 'exchange': 'Bursa', 'entity_type': 'COMPANY_NAME', 'entity_name': 'G3 GLOBAL', 'stock_symbol': 'G3', 'company_name': 'G3 GLOBAL BERHAD'}
+{'news_id': 430, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 510, 'stock_id': 545, 'exchange': 'Bursa', 'entity_type': 'COMPANY_NAME', 'entity_name': 'KENANGA INVESTMENT BANK', 'stock_symbol': 'KENANGA', 'company_name': 'KENANGA INVESTMENT BANK BERHAD'}
+{'news_id': 250, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 522, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 97, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 301, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 518, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 327, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 415, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 23, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 435, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 492, 'stock_id': None, 'exchange': None, 'entity_type': 'STOCK_SYMBOL', 'entity_name': 'FGV', 'stock_symbol': None, 'company_name': None}
+{'news_id': 324, 'stock_id': 32, 'exchange': 'Bursa', 'entity_type': 'COMPANY_NAME', 'entity_name': 'MALAYSIA AIRPORTS HOLDINGS', 'stock_symbol': 'AIRPORT', 'company_name': 'MALAYSIA AIRPORTS HOLDINGS BHD'}
+{'news_id': 34, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 19, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 258, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 124, 'stock_id': 13, 'exchange': 'Bursa', 'entity_type': 'COMPANY_NAME', 'entity_name': 'ADVANCECON HOLDINGS', 'stock_symbol': 'ADVCON', 'company_name': 'ADVANCECON HOLDINGS BERHAD'}
+{'news_id': 275, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 252, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 361, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 418, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 233, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 363, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 261, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 31, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 395, 'stock_id': 673, 'exchange': 'Bursa', 'entity_type': 'COMPANY_NAME', 'entity_name': 'MESTRON HOLDINGS', 'stock_symbol': 'MESTRON', 'company_name': 'MESTRON HOLDINGS BERHAD'}
+{'news_id': 226, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 78, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 158, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 417, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 419, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 77, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 82, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 452, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 482, 'stock_id': 166, 'exchange': 'Bursa', 'entity_type': 'COMPANY_NAME', 'entity_name': 'CAPITAL A', 'stock_symbol': 'CAPITALA', 'company_name': 'CAPITAL A BERHAD'}
+{'news_id': 111, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 20, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 166, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 532, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 269, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 5, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 282, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 289, 'stock_id': 1128, 'exchange': 'Bursa', 'entity_type': 'COMPANY_NAME', 'entity_name': 'UEM SUNRISE', 'stock_symbol': 'UEMS', 'company_name': 'UEM SUNRISE BERHAD'}
+{'news_id': 289, 'stock_id': 987, 'exchange': 'Bursa', 'entity_type': 'COMPANY_NAME', 'entity_name': 'SIME DARBY PROPERTY', 'stock_symbol': 'SIMEPROP', 'company_name': 'SIME DARBY PROPERTY BERHAD'}
+{'news_id': 367, 'stock_id': 243, 'exchange': 'Bursa', 'entity_type': 'COMPANY_NAME', 'entity_name': 'DAYANG ENTERPRISE HOLDINGS', 'stock_symbol': 'DAYANG', 'company_name': 'DAYANG ENTERPRISE HOLDINGS BHD'}
+{'news_id': 367, 'stock_id': 827, 'exchange': 'Bursa', 'entity_type': 'COMPANY_NAME', 'entity_name': 'PETRA ENERGY', 'stock_symbol': 'PENERGY', 'company_name': 'PETRA ENERGY BHD'}
+{'news_id': 367, 'stock_id': 169, 'exchange': 'Bursa', 'entity_type': 'COMPANY_NAME', 'entity_name': 'CARIMIN PETROLEUM', 'stock_symbol': 'CARIMIN', 'company_name': 'CARIMIN PETROLEUM BERHAD'}
+{'news_id': 140, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 99, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 101, 'stock_id': 976, 'exchange': 'Bursa', 'entity_type': 'COMPANY_NAME', 'entity_name': 'SERBA DINAMIK HOLDINGS', 'stock_symbol': 'SERBADK', 'company_name': 'SERBA DINAMIK HOLDINGS BERHAD'}
+{'news_id': 307, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 356, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 317, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 428, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 108, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 400, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 143, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 369, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 153, 'stock_id': 488, 'exchange': 'Bursa', 'entity_type': 'COMPANY_NAME', 'entity_name': 'IHH HEALTHCARE', 'stock_symbol': 'IHH', 'company_name': 'IHH HEALTHCARE BERHAD'}
+{'news_id': 153, 'stock_id': 103, 'exchange': 'Bursa', 'entity_type': 'COMPANY_NAME', 'entity_name': 'AXIATA GROUP', 'stock_symbol': 'AXIATA', 'company_name': 'AXIATA GROUP BERHAD'}
+{'news_id': 253, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 274, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 389, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 279, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 255, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 303, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 388, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 10, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 24, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 359, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 404, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 264, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 25, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 268, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 491, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 40, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 30, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 509, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 4, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 51, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 298, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 134, 'stock_id': 651, 'exchange': 'Bursa', 'entity_type': 'COMPANY_NAME', 'entity_name': 'MALAYAN BANKING', 'stock_symbol': 'MAYBANK', 'company_name': 'MALAYAN BANKING BHD'}
+{'news_id': 240, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 201, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 325, 'stock_id': 910, 'exchange': 'Bursa', 'entity_type': 'COMPANY_NAME', 'entity_name': 'RADIANT GLOBALTECH', 'stock_symbol': 'RGTECH', 'company_name': 'RADIANT GLOBALTECH BERHAD'}
+{'news_id': 325, 'stock_id': 1006, 'exchange': 'Bursa', 'entity_type': 'COMPANY_NAME', 'entity_name': 'SMTRACK', 'stock_symbol': 'SMTRACK', 'company_name': 'SMTRACK BERHAD'}
+{'news_id': 325, 'stock_id': 1013, 'exchange': 'Bursa', 'entity_type': 'COMPANY_NAME', 'entity_name': 'SPRING ART HOLDINGS', 'stock_symbol': 'SPRING', 'company_name': 'SPRING ART HOLDINGS BERHAD'}
+{'news_id': 329, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 352, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 378, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 225, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 357, 'stock_id': 32, 'exchange': 'Bursa', 'entity_type': 'COMPANY_NAME', 'entity_name': 'MALAYSIA AIRPORTS HOLDINGS', 'stock_symbol': 'AIRPORT', 'company_name': 'MALAYSIA AIRPORTS HOLDINGS BHD'}
+{'news_id': 75, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 11, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 187, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 218, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 9, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 277, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 71, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 84, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 391, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 348, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 195, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 459, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 88, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 293, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 130, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 376, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 503, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 500, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 304, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 520, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 231, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 257, 'stock_id': 893, 'exchange': 'Bursa', 'entity_type': 'COMPANY_NAME', 'entity_name': 'RANHILL UTILITIES', 'stock_symbol': 'RANHILL', 'company_name': 'RANHILL UTILITIES BERHAD'}
+{'news_id': 257, 'stock_id': 56, 'exchange': 'Bursa', 'entity_type': 'COMPANY_NAME', 'entity_name': 'ANEKA JARINGAN HOLDINGS', 'stock_symbol': 'ANEKA', 'company_name': 'ANEKA JARINGAN HOLDINGS BERHAD'}
+{'news_id': 257, 'stock_id': 373, 'exchange': 'Bursa', 'entity_type': 'COMPANY_NAME', 'entity_name': 'G3 GLOBAL', 'stock_symbol': 'G3', 'company_name': 'G3 GLOBAL BERHAD'}
+{'news_id': 257, 'stock_id': 944, 'exchange': 'Bursa', 'entity_type': 'COMPANY_NAME', 'entity_name': 'SC ESTATE BUILDER', 'stock_symbol': 'SCBUILD', 'company_name': 'SC ESTATE BUILDER BERHAD'}
+{'news_id': 257, 'stock_id': 893, 'exchange': 'Bursa', 'entity_type': 'COMPANY_NAME', 'entity_name': 'RANHILL UTILITIES', 'stock_symbol': 'RANHILL', 'company_name': 'RANHILL UTILITIES BERHAD'}
+{'news_id': 411, 'stock_id': 488, 'exchange': 'Bursa', 'entity_type': 'COMPANY_NAME', 'entity_name': 'IHH HEALTHCARE', 'stock_symbol': 'IHH', 'company_name': 'IHH HEALTHCARE BERHAD'}
+{'news_id': 411, 'stock_id': 103, 'exchange': 'Bursa', 'entity_type': 'COMPANY_NAME', 'entity_name': 'AXIATA GROUP', 'stock_symbol': 'AXIATA', 'company_name': 'AXIATA GROUP BERHAD'}
+{'news_id': 411, 'stock_id': 604, 'exchange': 'Bursa', 'entity_type': 'COMPANY_NAME', 'entity_name': 'LBS BINA GROUP', 'stock_symbol': 'LBS', 'company_name': 'LBS BINA GROUP BHD'}
+{'news_id': 411, 'stock_id': 63, 'exchange': 'Bursa', 'entity_type': 'COMPANY_NAME', 'entity_name': 'APB RESOURCES', 'stock_symbol': 'APB', 'company_name': 'APB RESOURCES BHD'}
+{'news_id': 483, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 316, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 216, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 281, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 368, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 521, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 443, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 466, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 238, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 314, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 373, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 484, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 407, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 462, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 409, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 27, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 28, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 12, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 499, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 102, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 104, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 13, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 193, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 123, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 414, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 15, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 116, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 451, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 16, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 523, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 497, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 461, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 490, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 420, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 85, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 343, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 538, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 429, 'stock_id': 692, 'exchange': 'Bursa', 'entity_type': 'COMPANY_NAME', 'entity_name': 'MISC', 'stock_symbol': 'MISC', 'company_name': 'MISC BHD'}
+{'news_id': 18, 'stock_id': 125, 'exchange': 'Bursa', 'entity_type': 'COMPANY_NAME', 'entity_name': 'BANK ISLAM MALAYSIA', 'stock_symbol': 'BIMB', 'company_name': 'BANK ISLAM MALAYSIA BERHAD'}
+{'news_id': 122, 'stock_id': 414, 'exchange': 'Bursa', 'entity_type': 'COMPANY_NAME', 'entity_name': 'HAP SENG CONSOLIDATED', 'stock_symbol': 'HAPSENG', 'company_name': 'HAP SENG CONSOLIDATED BHD'}
+{'news_id': 118, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 22, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 147, 'stock_id': 90, 'exchange': 'Bursa', 'entity_type': 'COMPANY_NAME', 'entity_name': 'ATA IMS', 'stock_symbol': 'ATAIMS', 'company_name': 'ATA IMS BERHAD'}
+{'news_id': 178, 'stock_id': 976, 'exchange': 'Bursa', 'entity_type': 'COMPANY_NAME', 'entity_name': 'SERBA DINAMIK HOLDINGS', 'stock_symbol': 'SERBADK', 'company_name': 'SERBA DINAMIK HOLDINGS BERHAD'}
+{'news_id': 433, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 236, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 479, 'stock_id': 604, 'exchange': 'Bursa', 'entity_type': 'COMPANY_NAME', 'entity_name': 'LBS BINA GROUP', 'stock_symbol': 'LBS', 'company_name': 'LBS BINA GROUP BHD'}
+{'news_id': 437, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 138, 'stock_id': 640, 'exchange': 'Bursa', 'entity_type': 'COMPANY_NAME', 'entity_name': 'MALTON', 'stock_symbol': 'MALTON', 'company_name': 'MALTON BHD'}
+{'news_id': 371, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 151, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 6, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 114, 'stock_id': 413, 'exchange': 'Bursa', 'entity_type': 'COMPANY_NAME', 'entity_name': 'HANDAL ENERGY', 'stock_symbol': 'HANDAL', 'company_name': 'HANDAL ENERGY BERHAD'}
+{'news_id': 45, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 441, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 32, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 189, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 133, 'stock_id': 598, 'exchange': 'Bursa', 'entity_type': 'COMPANY_NAME', 'entity_name': 'LAGENDA PROPERTIES', 'stock_symbol': 'LAGENDA', 'company_name': 'LAGENDA PROPERTIES BERHAD'}
+{'news_id': 33, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 447, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 129, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 131, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 230, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 43, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 156, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 37, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 38, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 162, 'stock_id': 974, 'exchange': 'Bursa', 'entity_type': 'COMPANY_NAME', 'entity_name': 'SENHENG NEW RETAIL', 'stock_symbol': 'SENHENG', 'company_name': 'SENHENG NEW RETAIL BERHAD'}
+{'news_id': 141, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 481, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 161, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 39, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 217, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 432, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 169, 'stock_id': 389, 'exchange': 'Bursa', 'entity_type': 'COMPANY_NAME', 'entity_name': 'GFM SERVICES', 'stock_symbol': 'GFM', 'company_name': 'GFM SERVICES BERHAD'}
+{'news_id': 169, 'stock_id': None, 'exchange': None, 'entity_type': 'STOCK_SYMBOL', 'entity_name': 'FM', 'stock_symbol': None, 'company_name': None}
+{'news_id': 168, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 494, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 173, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 454, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 312, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 175, 'stock_id': 866, 'exchange': 'Bursa', 'entity_type': 'COMPANY_NAME', 'entity_name': 'POH KONG HOLDINGS', 'stock_symbol': 'POHKONG', 'company_name': 'POH KONG HOLDINGS BHD'}
+{'news_id': 315, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 180, 'stock_id': 986, 'exchange': 'Bursa', 'entity_type': 'COMPANY_NAME', 'entity_name': 'SIME DARBY', 'stock_symbol': 'SIME', 'company_name': 'SIME DARBY BHD'}
+{'news_id': 505, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 167, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 464, 'stock_id': 604, 'exchange': 'Bursa', 'entity_type': 'COMPANY_NAME', 'entity_name': 'LBS BINA GROUP', 'stock_symbol': 'LBS', 'company_name': 'LBS BINA GROUP BHD'}
+{'news_id': 179, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 41, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 83, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 467, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 46, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 47, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 182, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 184, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 185, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 174, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 48, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 49, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 50, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 337, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 177, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 92, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 229, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 334, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 374, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 375, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 401, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 188, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 191, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 444, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 502, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 448, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 471, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 528, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 536, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 465, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 524, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 63, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 489, 'stock_id': 637, 'exchange': 'Bursa', 'entity_type': 'COMPANY_NAME', 'entity_name': 'MAH SING GROUP', 'stock_symbol': 'MAHSING', 'company_name': 'MAH SING GROUP BHD'}
+{'news_id': 512, 'stock_id': 1006, 'exchange': 'Bursa', 'entity_type': 'COMPANY_NAME', 'entity_name': 'SMTRACK', 'stock_symbol': 'SMTRACK', 'company_name': 'SMTRACK BERHAD'}
+{'news_id': 21, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 194, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 53, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 326, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 291, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 210, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 192, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 235, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 322, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 26, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 379, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 197, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 54, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 393, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 408, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 507, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 198, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 424, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 427, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 495, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 457, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 340, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 55, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 514, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 248, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 228, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 535, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 349, 'stock_id': 651, 'exchange': 'Bursa', 'entity_type': 'COMPANY_NAME', 'entity_name': 'MALAYAN BANKING', 'stock_symbol': 'MAYBANK', 'company_name': 'MALAYAN BANKING BHD'}
+{'news_id': 349, 'stock_id': None, 'exchange': None, 'entity_type': 'STOCK_SYMBOL', 'entity_name': 'MAYBANK', 'stock_symbol': None, 'company_name': None}
+{'news_id': 60, 'stock_id': 944, 'exchange': 'Bursa', 'entity_type': 'COMPANY_NAME', 'entity_name': 'SC ESTATE BUILDER', 'stock_symbol': 'SCBUILD', 'company_name': 'SC ESTATE BUILDER BERHAD'}
+{'news_id': 60, 'stock_id': None, 'exchange': None, 'entity_type': 'STOCK_SYMBOL', 'entity_name': 'SCBUILD', 'stock_symbol': None, 'company_name': None}
+{'news_id': 377, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 263, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 422, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 254, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 57, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 292, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 58, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 284, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 493, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 517, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 453, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 501, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 68, 'stock_id': 269, 'exchange': 'Bursa', 'entity_type': 'COMPANY_NAME', 'entity_name': 'DATASONIC GROUP', 'stock_symbol': 'DSONIC', 'company_name': 'DATASONIC GROUP BERHAD'}
+{'news_id': 61, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 62, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 296, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 390, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 117, 'stock_id': 1092, 'exchange': 'Bursa', 'entity_type': 'COMPANY_NAME', 'entity_name': 'TIME DOTCOM', 'stock_symbol': 'TIMECOM', 'company_name': 'TIME DOTCOM BHD'}
+{'news_id': 142, 'stock_id': 840, 'exchange': 'Bursa', 'entity_type': 'COMPANY_NAME', 'entity_name': 'PETRONAS GAS', 'stock_symbol': 'PETGAS', 'company_name': 'PETRONAS GAS BHD'}
+{'news_id': 142, 'stock_id': 839, 'exchange': 'Bursa', 'entity_type': 'COMPANY_NAME', 'entity_name': 'PETRONAS DAGANGAN', 'stock_symbol': 'PETDAG', 'company_name': 'PETRONAS DAGANGAN BHD'}
+{'news_id': 297, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 170, 'stock_id': 974, 'exchange': 'Bursa', 'entity_type': 'COMPANY_NAME', 'entity_name': 'SENHENG NEW RETAIL', 'stock_symbol': 'SENHENG', 'company_name': 'SENHENG NEW RETAIL BERHAD'}
+{'news_id': 306, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 309, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 239, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 69, 'stock_id': 74, 'exchange': 'Bursa', 'entity_type': 'COMPANY_NAME', 'entity_name': 'BUMI ARMADA', 'stock_symbol': 'ARMADA', 'company_name': 'BUMI ARMADA BERHAD'}
+{'news_id': 265, 'stock_id': 893, 'exchange': 'Bursa', 'entity_type': 'COMPANY_NAME', 'entity_name': 'RANHILL UTILITIES', 'stock_symbol': 'RANHILL', 'company_name': 'RANHILL UTILITIES BERHAD'}
+{'news_id': 115, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 313, 'stock_id': 944, 'exchange': 'Bursa', 'entity_type': 'COMPANY_NAME', 'entity_name': 'SC ESTATE BUILDER', 'stock_symbol': 'SCBUILD', 'company_name': 'SC ESTATE BUILDER BERHAD'}
+{'news_id': 313, 'stock_id': None, 'exchange': None, 'entity_type': 'STOCK_SYMBOL', 'entity_name': 'SCBUILD', 'stock_symbol': None, 'company_name': None}
+{'news_id': 311, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 331, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 332, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 64, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 345, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 346, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 66, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 67, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 347, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 354, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 381, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 386, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 73, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 436, 'stock_id': 488, 'exchange': 'Bursa', 'entity_type': 'COMPANY_NAME', 'entity_name': 'IHH HEALTHCARE', 'stock_symbol': 'IHH', 'company_name': 'IHH HEALTHCARE BERHAD'}
+{'news_id': 387, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 478, 'stock_id': 1079, 'exchange': 'Bursa', 'entity_type': 'COMPANY_NAME', 'entity_name': 'TENAGA NASIONAL', 'stock_symbol': 'TENAGA', 'company_name': 'TENAGA NASIONAL BHD'}
+{'news_id': 1, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 534, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 350, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 35, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 157, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 52, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 440, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 72, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 434, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 94, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 200, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 81, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 86, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 139, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 90, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 91, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 237, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 208, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 183, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 196, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 530, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 380, 'stock_id': 125, 'exchange': 'Bursa', 'entity_type': 'COMPANY_NAME', 'entity_name': 'BANK ISLAM MALAYSIA', 'stock_symbol': 'BIMB', 'company_name': 'BANK ISLAM MALAYSIA BERHAD'}
+{'news_id': 537, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 294, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 128, 'stock_id': 811, 'exchange': 'Bursa', 'entity_type': 'COMPANY_NAME', 'entity_name': 'PARKSON HOLDINGS', 'stock_symbol': 'PARKSON', 'company_name': 'PARKSON HOLDINGS BHD'}
+{'news_id': 206, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 159, 'stock_id': 466, 'exchange': 'Bursa', 'entity_type': 'COMPANY_NAME', 'entity_name': 'HUP SENG INDUSTRIES', 'stock_symbol': 'HUPSENG', 'company_name': 'HUP SENG INDUSTRIES BHD'}
+{'news_id': 212, 'stock_id': None, 'exchange': None, 'entity_type': 'STOCK_SYMBOL', 'entity_name': 'MYEG', 'stock_symbol': None, 'company_name': None}
+{'news_id': 223, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 272, 'stock_id': 1128, 'exchange': 'Bursa', 'entity_type': 'COMPANY_NAME', 'entity_name': 'UEM SUNRISE', 'stock_symbol': 'UEMS', 'company_name': 'UEM SUNRISE BERHAD'}
+{'news_id': 272, 'stock_id': 987, 'exchange': 'Bursa', 'entity_type': 'COMPANY_NAME', 'entity_name': 'SIME DARBY PROPERTY', 'stock_symbol': 'SIMEPROP', 'company_name': 'SIME DARBY PROPERTY BERHAD'}
+{'news_id': 79, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 95, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 209, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 96, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 190, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 246, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 392, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 295, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 98, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 398, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 251, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 396, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 333, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 299, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 219, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 319, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 244, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 270, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 271, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 148, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 496, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 278, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 290, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 399, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 300, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 308, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 321, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 513, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 527, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 103, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 342, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 410, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 416, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 470, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 105, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 423, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 480, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 455, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 106, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 469, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 107, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 506, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 516, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 109, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 17, 'stock_id': 125, 'exchange': 'Bursa', 'entity_type': 'COMPANY_NAME', 'entity_name': 'BANK ISLAM MALAYSIA', 'stock_symbol': 'BIMB', 'company_name': 'BANK ISLAM MALAYSIA BERHAD'}
+{'news_id': 450, 'stock_id': 63, 'exchange': 'Bursa', 'entity_type': 'COMPANY_NAME', 'entity_name': 'APB RESOURCES', 'stock_symbol': 'APB', 'company_name': 'APB RESOURCES BHD'}
+{'news_id': 112, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 145, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 222, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 65, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 70, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 120, 'stock_id': 651, 'exchange': 'Bursa', 'entity_type': 'COMPANY_NAME', 'entity_name': 'MALAYAN BANKING', 'stock_symbol': 'MAYBANK', 'company_name': 'MALAYAN BANKING BHD'}
+{'news_id': 120, 'stock_id': None, 'exchange': None, 'entity_type': 'STOCK_SYMBOL', 'entity_name': 'MAYBANK', 'stock_symbol': None, 'company_name': None}
+{'news_id': 121, 'stock_id': 13, 'exchange': 'Bursa', 'entity_type': 'COMPANY_NAME', 'entity_name': 'ADVANCECON HOLDINGS', 'stock_symbol': 'ADVCON', 'company_name': 'ADVANCECON HOLDINGS BERHAD'}
+{'news_id': 119, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 146, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 126, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 127, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 74, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 215, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 132, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 224, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 135, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 243, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 155, 'stock_id': 649, 'exchange': 'Bursa', 'entity_type': 'COMPANY_NAME', 'entity_name': 'MAXIS', 'stock_symbol': 'MAXIS', 'company_name': 'MAXIS BERHAD'}
+{'news_id': 155, 'stock_id': None, 'exchange': None, 'entity_type': 'STOCK_SYMBOL', 'entity_name': 'MBSB', 'stock_symbol': None, 'company_name': None}
+{'news_id': 160, 'stock_id': 201, 'exchange': 'Bursa', 'entity_type': 'COMPANY_NAME', 'entity_name': 'CIMB GROUP HOLDINGS', 'stock_symbol': 'CIMB', 'company_name': 'CIMB GROUP HOLDINGS BERHAD'}
+{'news_id': 163, 'stock_id': 649, 'exchange': 'Bursa', 'entity_type': 'COMPANY_NAME', 'entity_name': 'MAXIS', 'stock_symbol': 'MAXIS', 'company_name': 'MAXIS BERHAD'}
+{'news_id': 165, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 211, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 232, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 245, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 213, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 203, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 204, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 335, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 273, 'stock_id': 373, 'exchange': 'Bursa', 'entity_type': 'COMPANY_NAME', 'entity_name': 'G3 GLOBAL', 'stock_symbol': 'G3', 'company_name': 'G3 GLOBAL BERHAD'}
+{'news_id': 339, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 286, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 302, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 305, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 526, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 355, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 358, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 366, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 384, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 385, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 405, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 413, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 425, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 445, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 468, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 477, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 474, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 488, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 511, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 525, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 113, 'stock_id': 303, 'exchange': 'Bursa', 'entity_type': 'COMPANY_NAME', 'entity_name': 'EKOVEST', 'stock_symbol': 'EKOVEST', 'company_name': 'EKOVEST BHD'}
+{'news_id': 164, 'stock_id': 1006, 'exchange': 'Bursa', 'entity_type': 'COMPANY_NAME', 'entity_name': 'SMTRACK', 'stock_symbol': 'SMTRACK', 'company_name': 'SMTRACK BERHAD'}
+{'news_id': 486, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 285, 'stock_id': 56, 'exchange': 'Bursa', 'entity_type': 'COMPANY_NAME', 'entity_name': 'ANEKA JARINGAN HOLDINGS', 'stock_symbol': 'ANEKA', 'company_name': 'ANEKA JARINGAN HOLDINGS BERHAD'}
+{'news_id': 426, 'stock_id': 749, 'exchange': 'Bursa', 'entity_type': 'COMPANY_NAME', 'entity_name': 'NCT ALLIANCE', 'stock_symbol': 'NCT', 'company_name': 'NCT ALLIANCE BERHAD'}
+{'news_id': 508, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 475, 'stock_id': 190, 'exchange': 'Bursa', 'entity_type': 'COMPANY_NAME', 'entity_name': 'CHIN HIN GROUP PROPERTY', 'stock_symbol': 'CHGP', 'company_name': 'CHIN HIN GROUP PROPERTY BERHAD'}
+{'news_id': 475, 'stock_id': 1006, 'exchange': 'Bursa', 'entity_type': 'COMPANY_NAME', 'entity_name': 'SMTRACK', 'stock_symbol': 'SMTRACK', 'company_name': 'SMTRACK BERHAD'}
+{'news_id': 475, 'stock_id': 1151, 'exchange': 'Bursa', 'entity_type': 'COMPANY_NAME', 'entity_name': 'VERSATILE CREATIVE', 'stock_symbol': 'VERSATL', 'company_name': 'VERSATILE CREATIVE BHD'}
+{'news_id': 29, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 76, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 214, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 181, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 227, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 260, 'stock_id': 1079, 'exchange': 'Bursa', 'entity_type': 'COMPANY_NAME', 'entity_name': 'TENAGA NASIONAL', 'stock_symbol': 'TENAGA', 'company_name': 'TENAGA NASIONAL BHD'}
+{'news_id': 262, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 267, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 283, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 318, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 320, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 353, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 372, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 402, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 403, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 382, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 442, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 498, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 515, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 344, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 100, 'stock_id': 651, 'exchange': 'Bursa', 'entity_type': 'COMPANY_NAME', 'entity_name': 'MALAYAN BANKING', 'stock_symbol': 'MAYBANK', 'company_name': 'MALAYAN BANKING BHD'}
+{'news_id': 100, 'stock_id': 976, 'exchange': 'Bursa', 'entity_type': 'COMPANY_NAME', 'entity_name': 'SERBA DINAMIK HOLDINGS', 'stock_symbol': 'SERBADK', 'company_name': 'SERBA DINAMIK HOLDINGS BERHAD'}
+{'news_id': 100, 'stock_id': 1200, 'exchange': 'Bursa', 'entity_type': 'COMPANY_NAME', 'entity_name': 'YINSON HOLDINGS', 'stock_symbol': 'YINSON', 'company_name': 'YINSON HOLDINGS BHD'}
+{'news_id': 100, 'stock_id': 866, 'exchange': 'Bursa', 'entity_type': 'COMPANY_NAME', 'entity_name': 'POH KONG HOLDINGS', 'stock_symbol': 'POHKONG', 'company_name': 'POH KONG HOLDINGS BHD'}
+{'news_id': 100, 'stock_id': 414, 'exchange': 'Bursa', 'entity_type': 'COMPANY_NAME', 'entity_name': 'HAP SENG CONSOLIDATED', 'stock_symbol': 'HAPSENG', 'company_name': 'HAP SENG CONSOLIDATED BHD'}
+{'news_id': 100, 'stock_id': 13, 'exchange': 'Bursa', 'entity_type': 'COMPANY_NAME', 'entity_name': 'ADVANCECON HOLDINGS', 'stock_symbol': 'ADVCON', 'company_name': 'ADVANCECON HOLDINGS BERHAD'}
+{'news_id': 100, 'stock_id': None, 'exchange': None, 'entity_type': 'STOCK_SYMBOL', 'entity_name': 'MAYBANK', 'stock_symbol': None, 'company_name': None}
+{'news_id': 266, 'stock_id': 893, 'exchange': 'Bursa', 'entity_type': 'COMPANY_NAME', 'entity_name': 'RANHILL UTILITIES', 'stock_symbol': 'RANHILL', 'company_name': 'RANHILL UTILITIES BERHAD'}
+{'news_id': 383, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 406, 'stock_id': None, 'exchange': None, 'entity_type': 'STOCK_SYMBOL', 'entity_name': 'APM', 'stock_symbol': None, 'company_name': None}
+{'news_id': 406, 'stock_id': None, 'exchange': None, 'entity_type': 'STOCK_SYMBOL', 'entity_name': 'PA', 'stock_symbol': None, 'company_name': None}
+{'news_id': 44, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 87, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 89, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 186, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 199, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 412, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 431, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 529, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 438, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 476, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}
+{'news_id': 487, 'stock_id': None, 'exchange': None, 'entity_type': None, 'entity_name': None, 'stock_symbol': None, 'company_name': None}

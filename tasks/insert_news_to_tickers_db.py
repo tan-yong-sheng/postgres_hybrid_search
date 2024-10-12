@@ -28,14 +28,14 @@ def generate_news_to_stock_symbol():
 
     for item in news_items:
         stock_symbol_ids = perform_trigram_search_on_financial_entities(
-            exchange_market="Bursa",
+            exchange_market=item["exchange"],
             entity_name=item["entity_name"],
             entity_type=item["entity_type"],
         )
 
         yield {
             "news_id": item["news_id"],
-            "stock_symbol_id": [el["stock_id"] for el in stock_symbol_ids][0],
+            "stock_symbol_id": stock_symbol_ids["stock_id"],
         }
 
 
@@ -70,8 +70,11 @@ if __name__ == "__main__":
     news_to_stock_symbols = generate_news_to_stock_symbol()
 
     for news_to_stock_symbol in news_to_stock_symbols:
-        _ = insert_news_to_stock_symbol(
-            news_to_stock_symbol["news_id"], news_to_stock_symbol["stock_symbol_id"]
-        )
+        if news_to_stock_symbol["stock_symbol_id"] is None:
+            continue
+        else:
+            _ = insert_news_to_stock_symbol(
+                news_to_stock_symbol["news_id"], news_to_stock_symbol["stock_symbol_id"]
+            )
 
-        _ = update_news_is_ticker_checked(news_to_stock_symbol["news_id"])
+        # _ = update_news_is_ticker_checked(news_to_stock_symbol["news_id"])
