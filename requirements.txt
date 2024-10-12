@@ -10,3 +10,4 @@ pydantic==2.9.2
 SQLAlchemy==2.0.35
 spacy==3.8.2
 openai==1.51.0
+pytest==8.3.3
