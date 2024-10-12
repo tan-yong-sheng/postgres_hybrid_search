@@ -6,7 +6,7 @@ TEXT = """Based on corporate announcements and news flow on Monday,
         and Pantech Group Holdings Bhd"""
 
 
-def test_extract_financial_entities():
+def test_unit_extract_financial_entities():
     from project.utils.nlp_handler import extract_financial_entities
 
     matches = extract_financial_entities(TEXT)
