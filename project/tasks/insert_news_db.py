@@ -6,7 +6,7 @@ from sqlalchemy.orm import Session
 
 from project.db_connection import db_context
 from project.db_models import NewsOrm
-from project.schemas import NewsCreate
+from project.schemas.news_schema import NewsCreate
 
 logger = logging.getLogger(__name__)
 

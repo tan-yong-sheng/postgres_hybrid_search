@@ -1,9 +1,13 @@
-from project.db_connection import db_context
-from project.db_models import NewsOrm, NewsToStockSymbol
-from project.schemas import NewsToStockSymbolCreate, NewsToStockSymbolReturn
-from tasks.recognize_financial_entities import (
+from project.tasks.recognize_financial_entities import (
     extract_financial_entities_from_news_db,
     perform_trigram_search_on_financial_entities,
+)
+
+from project.db_connection import db_context
+from project.db_models import NewsOrm, NewsToStockSymbol
+from project.schemas.news_to_stocksymbol_schema import (
+    NewsToStockSymbolCreate,
+    NewsToStockSymbolReturn,
 )
 
 

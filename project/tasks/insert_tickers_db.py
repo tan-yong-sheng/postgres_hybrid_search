@@ -5,7 +5,7 @@ from sqlalchemy.orm import Session
 
 from project.db_connection import db_context
 from project.db_models import StockSymbolOrm
-from project.schemas import StockSymbolCreate
+from project.schemas.stocksymbol_schema import StockSymbolCreate
 
 logger = logging.getLogger(__name__)
 

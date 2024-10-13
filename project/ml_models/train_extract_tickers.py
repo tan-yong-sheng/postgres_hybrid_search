@@ -4,7 +4,7 @@ import spacy
 
 from project.db_connection import db_context
 from project.db_models import StockSymbolOrm
-from project.schemas import ExtractTicker
+from project.schemas.stocksymbol_schema import ExtractTicker
 
 
 def label_stock_code(label: str, text: str):
