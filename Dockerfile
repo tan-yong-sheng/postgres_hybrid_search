@@ -1,3 +1,4 @@
+# Image 1: image builder for Postgres
 # Use the official Postgres image as a base image
 FROM postgres:16.1-alpine3.19
 
