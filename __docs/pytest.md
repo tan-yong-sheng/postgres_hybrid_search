@@ -8,6 +8,7 @@ project\
 
 test\
   └── __init__.py # very important file to initialize pytest
+  └── conftest.py
   └── project/
       └── ....
 ```
