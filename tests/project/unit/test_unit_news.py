@@ -1,10 +1,12 @@
-import pytest
 from datetime import datetime
+
+import pytest
 from pydantic import ValidationError
 
-def test_unit_schema_news_validation():
-    from project.schemas.news_schema import NewsCreate
+from project.schemas.news_schema import NewsCreate
 
+
+def test_unit_schema_news_validation():
     valid_data = {
         "created_at": "2022-01-01 00:00:00",
         "updated_at": "2022-01-01 00:00:00",

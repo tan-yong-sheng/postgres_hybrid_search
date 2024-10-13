@@ -1,9 +1,10 @@
 import pytest
 from pydantic import ValidationError
 
-def test_unit_schema_stocksymbol_validation():
-    from project.schemas.stocksymbol_schema import StockSymbolCreate
+from project.schemas.stocksymbol_schema import StockSymbolCreate
 
+
+def test_unit_schema_stocksymbol_validation():
     valid_data = {
         "stock_symbol": "GENM",
         "company_name": "Genting Malaysia Berhad",
