@@ -19,4 +19,6 @@ pip install -r requirements.txt
 
 7. `python -m project.ml_models.train_extract_tickers`
 
-8. `python -m tasks.insert_news_to_tickers_db`
+8. `python -m project.tasks.insert_news_to_tickers_db`
+
+9. `python -m project.tasks.insert_news_embedding_db`
