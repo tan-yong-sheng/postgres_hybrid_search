@@ -22,3 +22,5 @@ pip install -r requirements.txt
 8. `python -m project.tasks.insert_news_to_tickers_db`
 
 9. `python -m project.tasks.insert_news_embedding_db`
+
+10. `python -m project.tasks.search_news`

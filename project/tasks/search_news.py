@@ -37,9 +37,10 @@ def find_similar_embeddings(query_embedding, limit=5):
     # Note: need to double check its sql query...
     # Note: the lower (or smaller) the distance metrics, the more relevance the embedding is...
     similarity_threshold = 0.7
-    query = (
+    results = (
         db.query(
-            NewsOrm,
+            NewsOrm.title,
+            NewsOrm.content,
             NewsOrm.embedding.cosine_distance(query_embedding).label("distance"),
         )
         .filter(
@@ -50,7 +51,12 @@ def find_similar_embeddings(query_embedding, limit=5):
         .all()
     )
     return [
-        {"title": q[0].title, "content": q[0].content, "score": 1 - q[1]} for q in query
+        {
+            "title": result.title,
+            "content": result.content,
+            "score": 1 - result.distance,
+        }
+        for result in results
     ]
 
 
@@ -59,17 +65,18 @@ if __name__ == "__main__":
 
     with db_context() as db:
         # part 1: keyword search
-        query = "Bursa Malaysia"
+        query = "Genting malaysia's project"
         keyword_search_results = find_similar_keywords(db, query)
         print("Keyword search result: ", keyword_search_results)
+        print("----------------------------")
 
         # part 2: embedding search
-        print("----------------------------")
-        # need to move this get_embedding() function to utils/?
-        from project.tasks.insert_news_embedding_db import get_embedding
+        from project.utils.embedding_handler import get_embedding
 
         query_embedding = get_embedding(input=query)
+        query_embedding = query_embedding["data"][0]["embedding"]
         semantic_search_results = find_similar_embeddings(query_embedding)
-        print(
-            "Semantic search result: ", semantic_search_results
-        )  # BUG: not working yet...
+        print("Semantic search result: ", semantic_search_results)
+        print("----------------------------")
+
+        # part 3: combine both keyword and embedding search
