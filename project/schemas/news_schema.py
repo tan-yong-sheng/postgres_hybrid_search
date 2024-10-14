@@ -1,6 +1,6 @@
 from datetime import datetime
 
-from pydantic import BaseModel
+from . import BaseModel
 
 
 class NewsSchema(BaseModel):
@@ -17,3 +17,9 @@ class NewsCreate(NewsSchema):
 
 class NewsReturn(NewsSchema):
     id: int
+
+
+class NewsSearchReturn(BaseModel):
+    title: str
+    content: str
+    score: float

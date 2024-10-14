@@ -23,4 +23,5 @@ pip install -r requirements.txt
 
 9. `python -m project.tasks.insert_news_embedding_db`
 
-10. `python -m project.tasks.search_news`
+10. `python -m project.tasks.full_text_search_news`
+`python -m project.tasks.vector_search_news`

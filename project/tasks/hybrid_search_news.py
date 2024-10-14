@@ -5,52 +5,60 @@ from sqlalchemy import text
 from project.db_connection import engine
 from project.utils.embedding_handler import get_embedding
 
-query_text = "what happens to genting malaysia"
-query_embedding = get_embedding(query_text)
+query_text = "genting malaysia's project"
+query_embedding = get_embedding(query_text)["data"][0]["embedding"]
 match_count = 50
 rrf_k = 50
 full_text_weight = 1
 semantic_weight = 1
-decay_rate = 1e-6  # Increased for better precision
-selected_datetime = datetime.strptime("2024-09-30 11:10:41", "%Y-%m-%d %H:%M:%S")
+decay_rate = 1e-6
+selected_datetime = datetime.now()
 
-
-hybrid_search_sql_command = text("""
-WITH full_text AS (
+full_text_search_sql_command = """
   SELECT
     id,
     row_number() OVER (
       ORDER BY ts_rank_cd(fts, websearch_to_tsquery(:query_text)) * 5 + 
-      (1 - :decay_rate) ^ EXTRACT(EPOCH FROM (:selected_datetime - created) / 43200) DESC
+      (1 - :decay_rate) ^ EXTRACT(EPOCH FROM (:selected_datetime - created_at) / 43200) DESC
     ) AS rank_ix
   FROM news
   WHERE fts @@ websearch_to_tsquery(:query_text)
   ORDER BY rank_ix
   LIMIT LEAST(:match_count, 30) * 2
-),
-semantic AS (
+"""
+
+vector_search_sql_command = """
   SELECT
     id,
     row_number() OVER (
-      ORDER BY (embedding <=> :query_embedding) * 5 + 
-      (1 - :decay_rate) ^ EXTRACT(EPOCH FROM (:selected_datetime - created) / 43200) DESC
+      ORDER BY (embedding <=> (:query_embedding)::vector) * 5 + 
+      (1 - :decay_rate) ^ EXTRACT(EPOCH FROM (:selected_datetime - created_at) / 43200) DESC
     ) AS rank_ix
   FROM news
   ORDER BY rank_ix
   LIMIT LEAST(:match_count, 30) * 2
+"""
+
+hybrid_search_sql_command = f"""
+WITH full_text AS (
+  {full_text_search_sql_command}
+),
+semantic AS (
+  {vector_search_sql_command}
 )
 SELECT
   news.title,
-  news.content
+  news.content,
+  COALESCE(1.0 / (:rrf_k + full_text.rank_ix), 0.0) * :full_text_weight +
+    COALESCE(1.0 / (:rrf_k + semantic.rank_ix), 0.0) * :semantic_weight AS score
 FROM
   full_text
   FULL OUTER JOIN semantic ON full_text.id = semantic.id
   JOIN news ON COALESCE(full_text.id, semantic.id) = news.id
 ORDER BY
-  COALESCE(1.0 / (:rrf_k + full_text.rank_ix), 0.0) * :full_text_weight +
-  COALESCE(1.0 / (:rrf_k + semantic.rank_ix), 0.0) * :semantic_weight DESC
+  score DESC
 LIMIT LEAST(:match_count, 30)
-""")
+"""
 
 params = {
     "query_text": query_text,
@@ -63,7 +71,12 @@ params = {
     "selected_datetime": selected_datetime,
 }
 
+
 with engine.connect() as conn:
-    results = conn.execute(hybrid_search_sql_command, **params)
-    for row in results:
-        print(row)
+    # Hybrid search
+    from project.schemas.news_schema import NewsSearchReturn
+
+    results = conn.execute(text(hybrid_search_sql_command), params)
+    results = [dict(row) for row in results.mappings()]
+    hybrid_search_results = [NewsSearchReturn(**result) for result in results]
+    print("Hybrid search result: ", hybrid_search_results)
