@@ -83,8 +83,10 @@ def perform_trigram_search_on_financial_entities(
 
 
 if __name__ == "__main__":
-    news_items = extract_financial_entities_from_news_db()
+    import pandas as pd
 
+    news_items = extract_financial_entities_from_news_db()
+    news_to_stocksymbols_items = []
     for item in news_items:
         stock_ids = perform_trigram_search_on_financial_entities(
             exchange_market=item["exchange"],
@@ -92,7 +94,7 @@ if __name__ == "__main__":
             entity_type=item["entity_type"],
         )
 
-        output = {
+        news_to_stocksymbols = {
             "news_id": item["news_id"],
             "stock_id": stock_ids["stock_id"],
             "exchange": item["exchange"],
@@ -101,6 +103,8 @@ if __name__ == "__main__":
             "stock_symbol": stock_ids["stock_symbol"],
             "company_name": stock_ids["company_name"],
         }
-        with open("output.txt", "a") as f:
-            f.write(str(output) + "\n")
-        print(output)
+        news_to_stocksymbols_items.append(news_to_stocksymbols)
+
+    _ = pd.DataFrame(news_to_stocksymbols_items).to_csv(
+        "data/news_to_stocksymbols/nts_.csv", index=False
+    )

@@ -99,4 +99,4 @@ def scrape_ticker_list(exchange: str, output_file: str):
 if __name__ == "__main__":
     os.makedirs("data/symbols", exist_ok=True)
 
-    scrape_ticker_list("Bursa", "data/symbols/bursa_stock_list.csv")
+    _ = scrape_ticker_list("Bursa", "data/symbols/bursa_stock_list.csv")

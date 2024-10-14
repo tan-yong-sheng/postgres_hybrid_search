@@ -34,21 +34,23 @@ def get_embedding(input: str):
     return response.model_dump()
 
 
-def update_embeddings_by_news_id(embedding_data: list[float]):
+def insert_embeddings_into_news_db(embedding_data: list[float]):
     news_with_empty_embeddings = check_empty_embeddings_in_news_db()
     ## update news record with created embeddings
     if news_with_empty_embeddings:
         with db_context() as db_session:
             for news in tqdm(news_with_empty_embeddings):
-                print(news.title)
                 embedding = get_embedding(
                     input=f"<title>{news.title}</title><content>{news.content}</content>",
                 )
-
-                setattr(news, "embedding", embedding)
+                for keys, values in news.items():
+                  if keys == "embedding":
+                    setattr(news, keys, embedding)
+                  else:
+                    setattr(news, keys, values)
                 db_session.add(news)
                 db_session.commit()
 
 
 if __name__ == "__main__":
-    _ = update_embeddings_by_news_id(...)
+    _ = insert_embeddings_into_news_db()
