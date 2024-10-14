@@ -4,6 +4,7 @@ from sqlalchemy.orm import Session
 from project.db_models import NewsOrm
 
 
+# note: need to add pydantic model for the response
 def find_similar_keywords(db: Session, query, limit=10):
     results = (
         db.query(
@@ -33,6 +34,7 @@ def find_similar_keywords(db: Session, query, limit=10):
     ]
 
 
+# note: need to add pydantic model for the response
 def find_similar_embeddings(query_embedding, limit=5):
     # Note: need to double check its sql query...
     # Note: the lower (or smaller) the distance metrics, the more relevance the embedding is...
