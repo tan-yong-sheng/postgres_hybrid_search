@@ -6,7 +6,7 @@ from sqlalchemy.sql.expression import desc, false, func
 from project.db_connection import db_context
 from project.db_models import NewsOrm, StockSymbolOrm
 from project.schemas.exchange_schema import ExchangeSchema
-from project.utils.nlp_handler import extract_financial_entities
+from project.utils.nlp_stock_handler import extract_financial_entities
 
 logger = logging.getLogger(__name__)
 
