@@ -12,13 +12,13 @@ def find_news_with_keywords(db: Session, query, limit=10):
             NewsOrm.title,
             NewsOrm.content,
             func.ts_rank(
-                NewsOrm.fts, func.websearch_to_tsquery("english", query)
+                NewsOrm.fts, func.plainto_tsquery("english", query)
             ).label("rank"),
         )
         .filter(NewsOrm.fts.match(query))
         .order_by(
             func.ts_rank(
-                NewsOrm.fts, func.websearch_to_tsquery("english", query)
+                NewsOrm.fts, func.plainto_tsquery("english", query)
             ).desc()
         )
         .limit(limit)

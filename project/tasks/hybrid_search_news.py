@@ -18,11 +18,11 @@ def find_similar_news(
         SELECT
           id,
           row_number() OVER (
-            ORDER BY ts_rank_cd(fts, websearch_to_tsquery(:query_text)) * 5 + 
+            ORDER BY ts_rank_cd(fts, plainto_tsquery(:query_text)) * 5 + 
             (1 - :decay_rate) ^ EXTRACT(EPOCH FROM (:selected_datetime - created_at) / 43200) DESC
           ) AS rank_ix
         FROM news
-        WHERE fts @@ websearch_to_tsquery(:query_text)
+        WHERE fts @@ plainto_tsquery(:query_text)
         ORDER BY rank_ix
         LIMIT LEAST(:match_count, 30) * 2
       """
