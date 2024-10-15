@@ -44,6 +44,7 @@ nlp = spacy.load("project/ml_models/extract_tickers_model")
 
 
 def extract_financial_entities(text: str):
+    # recognize company names, stock symbols, and stock codes in the text
     doc = nlp(text)
     financial_entities = []
     for ent in doc.ents:

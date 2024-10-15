@@ -105,6 +105,7 @@ if __name__ == "__main__":
         }
         news_to_stocksymbols_items.append(news_to_stocksymbols)
 
+    # bug
     _ = pd.DataFrame(news_to_stocksymbols_items).to_csv(
         "data/news_to_stocksymbols/nts_.csv", index=False
     )
