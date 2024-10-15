@@ -88,8 +88,8 @@ if __name__ == "__main__":
     os.makedirs("data/news", exist_ok=True)
 
     # Define the overall date range
-    overall_start_date = datetime.strptime("2022-01-01 00:00:00", "%Y-%m-%d %H:%M:%S")
-    overall_end_date = datetime.strptime("2022-01-05 23:59:59", "%Y-%m-%d %H:%M:%S")
+    overall_start_date = datetime.strptime("2024-01-01 00:00:00", "%Y-%m-%d %H:%M:%S")
+    overall_end_date = datetime.strptime("2024-10-14 23:59:59", "%Y-%m-%d %H:%M:%S")
 
     from project.utils.date_handler import generate_date_ranges
 

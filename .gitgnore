@@ -2,3 +2,6 @@
 __pycache__/
 data/
 coverage_re/
+data/news/
+data/news_to_stocksymbols/
+data/symbols/
