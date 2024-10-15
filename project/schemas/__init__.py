@@ -1,1 +1,1 @@
-from pydantic import BaseModel  # noqa
+from pydantic import BaseModel, conlist # noqa

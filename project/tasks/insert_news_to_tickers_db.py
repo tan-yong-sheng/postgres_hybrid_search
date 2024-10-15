@@ -1,13 +1,12 @@
-from project.tasks.recognize_financial_entities import (
-    extract_financial_entities_from_news_db,
-    perform_trigram_search_on_financial_entities,
-)
-
 from project.db_connection import db_context
 from project.db_models import NewsOrm, NewsToStockSymbol
 from project.schemas.news_to_stocksymbol_schema import (
     NewsToStockSymbolCreate,
     NewsToStockSymbolReturn,
+)
+from project.tasks.recognize_financial_entities import (
+    extract_financial_entities_from_news_db,
+    perform_trigram_search_on_financial_entities,
 )
 
 
@@ -74,11 +73,9 @@ if __name__ == "__main__":
     news_to_stock_symbols = generate_news_to_stock_symbol()
 
     for news_to_stock_symbol in news_to_stock_symbols:
-        if news_to_stock_symbol["stock_symbol_id"] is None:
-            continue
-        else:
+        if news_to_stock_symbol["stock_symbol_id"] is not None:
             _ = insert_news_to_stock_symbol(
                 news_to_stock_symbol["news_id"], news_to_stock_symbol["stock_symbol_id"]
             )
-
-        # _ = update_news_is_ticker_checked(news_to_stock_symbol["news_id"])
+        # Update the `is_ticker_checked` column to True for the `news` table
+        _ = update_news_is_ticker_checked(news_to_stock_symbol["news_id"])

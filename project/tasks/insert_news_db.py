@@ -27,6 +27,7 @@ def insert_news_into_db(csv_file_path: str):
     from project.utils.csv_handler import read_csv_file
 
     rows = read_csv_file(csv_file_path)
+
     with db_context() as db_session:
         for row in rows:
             existing_news = check_existing_news(
@@ -47,8 +48,8 @@ if __name__ == "__main__":
     from project.utils.date_handler import generate_date_ranges
 
     # Define the overall date range
-    overall_start_date = datetime.strptime("2022-01-01 00:00:00", "%Y-%m-%d %H:%M:%S")
-    overall_end_date = datetime.strptime("2022-01-05 23:59:59", "%Y-%m-%d %H:%M:%S")
+    overall_start_date = datetime.strptime("2024-01-01 00:00:00", "%Y-%m-%d %H:%M:%S")
+    overall_end_date = datetime.strptime("2024-10-14 23:59:59", "%Y-%m-%d %H:%M:%S")
 
     # Loop over each date range and scrape news data
     for start_date, end_date in generate_date_ranges(

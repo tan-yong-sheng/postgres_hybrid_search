@@ -1,3 +1,5 @@
+from sqlalchemy.sql.expression import desc
+
 from project.db_models import NewsOrm
 from project.schemas.news_schema import NewsSearchReturn
 
@@ -8,12 +10,12 @@ def find_news_with_similar_embeddings(query_embedding, limit=5):
         db.query(
             NewsOrm.title,
             NewsOrm.content,
-            NewsOrm.embedding.cosine_distance(query_embedding).label("distance"),
+            (1 - NewsOrm.embedding.cosine_distance(query_embedding)).label("score"),
         )
         .filter(
             NewsOrm.embedding.cosine_distance(query_embedding) < similarity_threshold
         )
-        .order_by("distance")
+        .order_by(desc("score"))
         .limit(limit)
         .all()
     )
@@ -22,7 +24,7 @@ def find_news_with_similar_embeddings(query_embedding, limit=5):
             **{
                 "title": result.title,
                 "content": result.content,
-                "score": 1 - result.distance,
+                "score": result.score,
             }
         )
         for result in results

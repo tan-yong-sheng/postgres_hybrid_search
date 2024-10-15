@@ -1,6 +1,7 @@
 from datetime import datetime
+from typing import Optional
 
-from . import BaseModel
+from . import BaseModel, conlist
 
 
 class NewsSchema(BaseModel):
@@ -9,6 +10,8 @@ class NewsSchema(BaseModel):
     title: str
     content: str
     url: str
+    is_ticker_checked: bool = False
+    embedding: Optional[conlist(float, min_length=384, max_length=384)] = None  # type: ignore
 
 
 class NewsCreate(NewsSchema):
