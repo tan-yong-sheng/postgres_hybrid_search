@@ -1,18 +1,24 @@
 from datetime import datetime
 
 from sqlalchemy import text
+from sqlalchemy.orm import Session
 
 from project.db_connection import engine
 
+# follow the pattern of vector_search and full_text_search
+# I need to filter out the specific companies first before executing similarity search...
+
 
 def find_similar_news(
-    query_text,
-    match_count,
-    rrf_k,
-    full_text_weight,
-    semantic_weight,
-    decay_rate,
-    selected_datetime,
+    db: Session,
+    query_text: str,
+    companies_name: list[str],
+    match_count: int,
+    rrf_k: int,
+    full_text_weight: float,
+    semantic_weight: float,
+    decay_rate: float,
+    selected_datetime: datetime,
 ):
     full_text_search_sql_command = """
         SELECT
