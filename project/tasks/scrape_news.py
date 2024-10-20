@@ -1,7 +1,6 @@
 from datetime import datetime
 from typing import Optional
 
-import pandas as pd
 import requests
 
 # Define headers and session for HTTP requests
@@ -99,6 +98,6 @@ if __name__ == "__main__":
     ):
         news_items = scrape_news(start_date=start_date, end_date=end_date)
         # Process the yielded news items and write them to a CSV
-        _ = pd.DataFrame(news_items).to_csv(
-            f"data/news/news_{end_date}.csv", index=False
-        )
+        from project.utils.csv_handler import export_to_csv
+
+        _ = export_to_csv(f"data/news/news_{end_date}.csv", news_items)

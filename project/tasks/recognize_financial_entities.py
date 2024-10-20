@@ -5,7 +5,6 @@ from sqlalchemy.sql.expression import desc, false, func
 
 from project.db_connection import db_context
 from project.db_models import NewsOrm, StockSymbolOrm
-from project.schemas.exchange_schema import ExchangeSchema
 from project.utils.nlp_stock_handler import extract_financial_entities
 
 logger = logging.getLogger(__name__)
@@ -44,7 +43,7 @@ def extract_financial_entities_from_news_db():
 
 
 def perform_trigram_search_on_financial_entities(
-    exchange_market: ExchangeSchema,
+    exchange_market: Literal["Bursa", "SGX"],
     entity_name: str,
     entity_type: Literal["STOCK_SYMBOL", "STOCK_CODE", "COMPANY_NAME"],
 ):
@@ -83,8 +82,6 @@ def perform_trigram_search_on_financial_entities(
 
 
 if __name__ == "__main__":
-    import pandas as pd
-
     news_items = extract_financial_entities_from_news_db()
     news_to_stocksymbols_items = []
     for item in news_items:
@@ -105,7 +102,7 @@ if __name__ == "__main__":
         }
         news_to_stocksymbols_items.append(news_to_stocksymbols)
 
-    # bug
-    _ = pd.DataFrame(news_to_stocksymbols_items).to_csv(
-        "data/news_to_stocksymbols/nts_.csv", index=False
-    )
+    # bug:
+    from project.utils.csv_handler import export_to_csv
+
+    _ = export_to_csv("data/news_to_stocksymbols/nts_.csv", news_to_stocksymbols_items)

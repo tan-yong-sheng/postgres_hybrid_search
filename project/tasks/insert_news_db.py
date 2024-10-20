@@ -11,7 +11,7 @@ from project.schemas.news_schema import NewsCreate
 logger = logging.getLogger(__name__)
 
 
-def check_existing_news(db: Session, news: NewsCreate):
+def check_existing_news(db: Session, news: dict):
     existing_news = (
         db.query(NewsOrm)
         .filter(
@@ -55,4 +55,5 @@ if __name__ == "__main__":
     for start_date, end_date in generate_date_ranges(
         overall_start_date, overall_end_date
     ):
+        print(f"Inserting news from csv file: data/news/news_{end_date}.csv")
         _ = insert_news_into_db(f"data/news/news_{end_date}.csv")

@@ -1,7 +1,7 @@
 from datetime import datetime
 from typing import Optional
 
-from . import BaseModel, conlist
+from pydantic import BaseModel, conlist
 
 
 class NewsSchema(BaseModel):
@@ -11,6 +11,7 @@ class NewsSchema(BaseModel):
     content: str
     url: str
     is_ticker_checked: bool = False
+    # ensure the length of the embedding list is 384
     embedding: Optional[conlist(float, min_length=384, max_length=384)] = None  # type: ignore
 
 

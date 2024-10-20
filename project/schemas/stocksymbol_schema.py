@@ -1,6 +1,6 @@
 from typing import Optional
 
-from . import BaseModel
+from pydantic import BaseModel
 
 
 class StockSymbolSchema(BaseModel):
