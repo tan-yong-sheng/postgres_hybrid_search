@@ -7,10 +7,12 @@ from project.db_connection import db_context
 from project.db_models import NewsOrm, StockSymbolOrm
 from project.utils.nlp_stock_handler import extract_financial_entities
 
+from typing import Iterable
+
 logger = logging.getLogger(__name__)
 
 
-def extract_financial_entities_from_news_db():
+def extract_financial_entities_from_news_db() -> Iterable[dict]:
     with db_context() as db_session:
         news_content_without_ticker_checked = (
             db_session.query(NewsOrm).filter(NewsOrm.is_ticker_checked == false()).all()
@@ -46,7 +48,7 @@ def perform_trigram_search_on_financial_entities(
     exchange_market: Literal["Bursa", "SGX"],
     entity_name: str,
     entity_type: Literal["STOCK_SYMBOL", "STOCK_CODE", "COMPANY_NAME"],
-):
+) -> dict:
     with db_context() as db_session:
         similarity_condition = StockSymbolOrm.exchange == exchange_market
         rank = func.similarity(StockSymbolOrm.company_name, entity_name)

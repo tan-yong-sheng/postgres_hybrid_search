@@ -1,3 +1,5 @@
+from typing import Iterable
+
 from project.db_connection import db_context
 from project.db_models import NewsOrm, NewsToStockSymbol
 from project.schemas.news_to_stocksymbol_schema import (
@@ -26,7 +28,7 @@ def check_existing_news_to_stock_symbol(
         return existing_news_to_stock_symbol
 
 
-def generate_news_to_stock_symbol():
+def generate_news_to_stock_symbol() -> Iterable[dict]:
     news_items = extract_financial_entities_from_news_db()
 
     for item in news_items:
