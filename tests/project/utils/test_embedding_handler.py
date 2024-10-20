@@ -1,11 +1,7 @@
 import json
 from pathlib import Path
 
-from project.utils.embedding_handler import get_embedding
-
-
-def mock_output(return_value=None):
-    return lambda *arg, **kwargs: return_value
+from project.utils.embedding_handler import get_embedding, openai_client  # noqa: F401
 
 
 def test_integrate_get_embedding():
@@ -13,6 +9,7 @@ def test_integrate_get_embedding():
     expected_output = json.load(
         open(Path(__file__).parent / "embedding_output.json", "r")
     )
+    # Call the function to test
 
     result = get_embedding(input)
     # Assert the result matches the expected output

@@ -14,7 +14,6 @@ openai_client = openai.OpenAI(
     base_url=f"https://gateway.ai.cloudflare.com/v1/{CLOUDFLARE_ACCOUNT_ID}/{CLOUDFLARE_GATEWAY_ID}/workers-ai/v1/",
 )
 
-
 def get_embedding(input: str):
     response = openai_client.embeddings.create(
         model="@cf/baai/bge-small-en-v1.5", input=input
