@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest  
     strategy:  
       matrix:  
-        python-version: ["3.10"]  
+        python-version: ["3.11"]  
   
     steps:  
       - uses: actions/checkout@v3  
@@ -23,7 +23,7 @@ jobs:
       - name: Lint with Ruff  
         run: |  
           pip install ruff  
-          ruff . 
+          ruff --format=github --target-version=py311 .
         continue-on-error: true  
       - name: Test with pytest  
         run: |  
