@@ -84,7 +84,7 @@ class NewsOrm(Base):
         CheckConstraint("LENGTH(title)>0", name="check_title_length"),
         CheckConstraint("LENGTH(content)>0", name="check_content_length"),
         Index(
-            "hnsw_idx_news_content_trgm",
+            "hnsw_idx_news_content_embedding",
             embedding,
             postgresql_using="hnsw",
             postgresql_with={"m": 16, "ef_construction": 64},
