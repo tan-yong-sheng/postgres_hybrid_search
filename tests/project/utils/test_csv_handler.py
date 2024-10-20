@@ -1,6 +1,6 @@
 from project.utils.csv_handler import (
-    export_iterable_to_csv,  # Adjust the import according to your project structure
-)
+    export_iterable_to_csv,
+)  # Adjust the import according to your project structure
 
 
 def test_integrate_export_iterable_to_csv_with_header(tmp_path):

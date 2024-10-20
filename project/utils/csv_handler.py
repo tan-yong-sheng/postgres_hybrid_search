@@ -1,5 +1,4 @@
 import csv
-import pydantic
 from typing import Iterable
 
 
