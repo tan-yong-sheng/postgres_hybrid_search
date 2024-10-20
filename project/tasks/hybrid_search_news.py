@@ -125,3 +125,20 @@ if __name__ == "__main__":
         )
         print("Hybrid news search: ", hybrid_search_results)
         print(len(hybrid_search_results))
+
+        # Export to CSV
+        keyword_search_results = [
+            {
+                "title": result.title,
+                "created_at": result.created_at,
+                "content": result.content,
+                "score": result.score,
+            }
+            for result in hybrid_search_results
+        ]
+
+        from project.utils.csv_handler import export_list_to_csv
+
+        _ = export_list_to_csv(
+            ".backup/hybrid_search_results.csv", hybrid_search_results
+        )

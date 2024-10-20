@@ -6,7 +6,10 @@ from project.schemas.news_schema import NewsSearchReturn
 
 
 def find_news_with_similar_embeddings(
-    db: Session, query_embedding: list[float], companies_name: list[str], limit: int = 5
+    db: Session,
+    query_embedding: list[float],
+    companies_name: list[str],
+    limit: int = 30,
 ):
     similarity_threshold = 0.7
     stock_ids = [
@@ -61,10 +64,27 @@ if __name__ == "__main__":
         # Embedding search
         from project.utils.embedding_handler import get_embedding
 
-        query = "future projection"
-        companies = ["GENTING BHD", "GENTING MALAYSIA BERHAD"]
+        query = "project"
+        companies = ["GENTING MALAYSIA BERHAD", "GENTING BHD"]
         query_embedding = get_embedding(input=query)["data"][0]["embedding"]
         semantic_search_results = find_news_with_similar_embeddings(
             db, query_embedding, companies_name=companies
         )
         print("Semantic search result: ", semantic_search_results)
+
+        # Export to CSV
+        semantic_search_results = [
+            {
+                "title": result.title,
+                "created_at": result.created_at,
+                "content": result.content,
+                "score": result.score,
+            }
+            for result in semantic_search_results
+        ]
+
+        from project.utils.csv_handler import export_list_to_csv
+
+        _ = export_list_to_csv(
+            ".backup/semantic_search_results.csv", semantic_search_results
+        )

@@ -62,6 +62,23 @@ if __name__ == "__main__":
     with db_context() as db:
         # Keyword search
         query = "project"
-        companies_name = ["GENTING BHD", "GENTING MALAYSIA BERHAD"]
+        companies_name = ["GENTING MALAYSIA BERHAD", "GENTING BHD"]
         keyword_search_results = find_news_with_keywords(db, query, companies_name)
         print("Keyword search result: ", keyword_search_results)
+
+        # Export to CSV
+        keyword_search_results = [
+            {
+                "title": result.title,
+                "created_at": result.created_at,
+                "content": result.content,
+                "score": result.score,
+            }
+            for result in keyword_search_results
+        ]
+
+        from project.utils.csv_handler import export_list_to_csv
+
+        _ = export_list_to_csv(
+            ".backup/keyword_search_results.csv", keyword_search_results
+        )

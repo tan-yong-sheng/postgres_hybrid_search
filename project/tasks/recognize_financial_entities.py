@@ -105,6 +105,6 @@ if __name__ == "__main__":
         news_to_stocksymbols_items.append(news_to_stocksymbols)
 
     # bug:
-    from project.utils.csv_handler import export_to_csv
+    from project.utils.csv_handler import export_list_to_csv
 
-    _ = export_to_csv("data/news_to_stocksymbols/nts_.csv", news_to_stocksymbols_items)
+    _ = export_list_to_csv("data/news_to_stocksymbols/nts_.csv", news_to_stocksymbols_items)
