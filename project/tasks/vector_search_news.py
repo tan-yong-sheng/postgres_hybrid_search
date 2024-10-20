@@ -68,4 +68,3 @@ if __name__ == "__main__":
             db, query_embedding, companies_name=companies
         )
         print("Semantic search result: ", semantic_search_results)
-        print("Semantic search result: ", semantic_search_results)
