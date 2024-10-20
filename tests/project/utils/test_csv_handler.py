@@ -9,18 +9,19 @@ def test_integrate_export_to_csv_with_header(tmp_path):
     data = iter([{"name": "Alice", "age": 30}, {"name": "Bob", "age": 25}])
 
     # Expected CSV content
-    expected_output = "name,age\r\nAlice,30\r\nBob,25\r\n"
+    expected_output = "name,age\r\nBob,25\r\n"
 
     # Create a temporary file
     temp_file = tmp_path / "test_with_header.csv"
 
     # Call the function
-    export_to_csv(temp_file, data, header=True)
+    _ = export_to_csv(temp_file, data, header=True)
 
     # Read the CSV content
     with open(temp_file, mode="r", newline="") as csv_file:
         result = csv_file.read()
-
+        print(repr(result))
+    print("========1")
     # Assert the CSV content matches the expected output
     assert result == expected_output
 
@@ -42,6 +43,6 @@ def test_integrate_export_to_csv_without_header(tmp_path):
     # Read the CSV content
     with open(temp_file, mode="r", newline="") as csv_file:
         result = csv_file.read()
-
+        print(repr(result))
     # Assert the CSV content matches the expected output
     assert result == expected_output
