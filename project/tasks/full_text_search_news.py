@@ -29,6 +29,7 @@ def find_news_with_keywords(
     results = (
         db.query(
             NewsOrm.title,
+            NewsOrm.created_at,
             NewsOrm.content,
             func.ts_rank(NewsOrm.fts, func.plainto_tsquery("english", query)).label(
                 "rank"
@@ -46,6 +47,7 @@ def find_news_with_keywords(
         NewsSearchReturn(
             **{
                 "title": result.title,
+                "created_at": result.created_at,
                 "content": result.content,
                 "score": result.rank,
             }

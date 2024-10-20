@@ -24,5 +24,6 @@ class NewsReturn(NewsSchema):
 
 class NewsSearchReturn(BaseModel):
     title: str
+    created_at: datetime
     content: str
     score: float

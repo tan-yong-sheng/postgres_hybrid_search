@@ -29,6 +29,7 @@ def find_news_with_similar_embeddings(
     results = (
         db.query(
             NewsOrm.title,
+            NewsOrm.created_at,
             NewsOrm.content,
             (1 - NewsOrm.embedding.cosine_distance(query_embedding)).label("score"),
         )
@@ -44,6 +45,7 @@ def find_news_with_similar_embeddings(
         NewsSearchReturn(
             **{
                 "title": result.title,
+                "created_at": result.created_at,
                 "content": result.content,
                 "score": result.score,
             }

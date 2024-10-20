@@ -3,16 +3,27 @@ from datetime import datetime
 from sqlalchemy import text
 from sqlalchemy.orm import Session
 
-from project.db_connection import engine
+from project.db_connection import db_context
 
-# follow the pattern of vector_search and full_text_search
-# I need to filter out the specific companies first before executing similarity search...
+# note: pgvector '<=>' operator is used to calculate cosine similarity between two vectors
+
+
+def find_news_ids(db: Session, companies_name: list[str]):
+    news_ids = """
+      SELECT ntss.news_id 
+        FROM news_to_stock_symbol ntss
+        JOIN stock_symbols ss ON ntss.stock_symbol_id = ss.id
+        WHERE ss.company_name = ANY(:companies_name)
+      """
+    params = {"companies_name": companies_name}
+    news_ids = db.execute(text(news_ids), params).scalars().all()
+    return news_ids
 
 
 def find_similar_news(
     db: Session,
     query_text: str,
-    companies_name: list[str],
+    news_ids: tuple[int],
     match_count: int,
     rrf_k: int,
     full_text_weight: float,
@@ -24,25 +35,22 @@ def find_similar_news(
         SELECT
           id,
           row_number() OVER (
-            ORDER BY ts_rank_cd(fts, plainto_tsquery(:query_text)) * 5 + 
-            (1 - :decay_rate) ^ EXTRACT(EPOCH FROM (:selected_datetime - created_at) / 43200) DESC
+            ORDER BY ts_rank_cd(fts, plainto_tsquery(:query_text)) ASC
           ) AS rank_ix
         FROM news
-        WHERE fts @@ plainto_tsquery(:query_text)
-        ORDER BY rank_ix
-        LIMIT LEAST(:match_count, 30) * 2
+        WHERE fts @@ plainto_tsquery(:query_text) AND id = ANY(:news_ids)
+        LIMIT LEAST(:match_count, 30)
       """
 
     vector_search_sql_command = """
         SELECT
           id,
           row_number() OVER (
-            ORDER BY (embedding <=> (:query_embedding)::vector) * 5 + 
-            (1 - :decay_rate) ^ EXTRACT(EPOCH FROM (:selected_datetime - created_at) / 43200) DESC
+            ORDER BY (embedding <=> (:query_embedding)::vector) ASC
           ) AS rank_ix
         FROM news
-        ORDER BY rank_ix
-        LIMIT LEAST(:match_count, 30) * 2
+        WHERE embedding <=> (:query_embedding)::vector > 0.3 AND id = ANY(:news_ids)
+        LIMIT LEAST(:match_count, 30)
       """
 
     hybrid_search_sql_command = f"""
@@ -54,6 +62,7 @@ def find_similar_news(
       )
       SELECT
         news.title,
+        news.created_at,
         news.content,
         COALESCE(1.0 / (:rrf_k + full_text.rank_ix), 0.0) * :full_text_weight +
           COALESCE(1.0 / (:rrf_k + semantic.rank_ix), 0.0) * :semantic_weight AS score
@@ -61,8 +70,7 @@ def find_similar_news(
         full_text
         FULL OUTER JOIN semantic ON full_text.id = semantic.id
         JOIN news ON COALESCE(full_text.id, semantic.id) = news.id
-      ORDER BY
-        score DESC
+      ORDER BY score DESC
       LIMIT LEAST(:match_count, 30)
       """
 
@@ -75,17 +83,17 @@ def find_similar_news(
         "semantic_weight": semantic_weight,
         "decay_rate": decay_rate,
         "selected_datetime": selected_datetime,
+        "news_ids": news_ids,
     }
 
-    with engine.connect() as conn:
-        # Hybrid search
-        from project.schemas.news_schema import NewsSearchReturn
+    # Hybrid search
+    from project.schemas.news_schema import NewsSearchReturn
 
-        results = conn.execute(text(hybrid_search_sql_command), params)
-        hybrid_search_results = [
-            NewsSearchReturn(**dict(row)) for row in results.mappings()
-        ]
-        return hybrid_search_results
+    results = db.execute(text(hybrid_search_sql_command), params)
+    hybrid_search_results = [
+        NewsSearchReturn(**dict(row)) for row in results.mappings()
+    ]
+    return hybrid_search_results
 
 
 if __name__ == "__main__":
@@ -93,6 +101,7 @@ if __name__ == "__main__":
 
     query_text = "genting malaysia's project"
     query_embedding = get_embedding(query_text)["data"][0]["embedding"]
+    companies_name = ["GENTING MALAYSIA BERHAD", "GENTING BHD"]
     match_count = 50
     rrf_k = 50
     full_text_weight = 1
@@ -100,13 +109,19 @@ if __name__ == "__main__":
     decay_rate = 1e-6
     selected_datetime = datetime.now()
 
-    hybrid_search_results = find_similar_news(
-        query_text,
-        match_count,
-        rrf_k,
-        full_text_weight,
-        semantic_weight,
-        decay_rate,
-        selected_datetime,
-    )
-    print("Hybrid news search: ", hybrid_search_results)
+    with db_context() as db_session:
+        news_ids = find_news_ids(db_session, companies_name)
+
+        hybrid_search_results = find_similar_news(
+            db_session,
+            query_text,
+            news_ids,
+            match_count,
+            rrf_k,
+            full_text_weight,
+            semantic_weight,
+            decay_rate,
+            selected_datetime,
+        )
+        print("Hybrid news search: ", hybrid_search_results)
+        print(len(hybrid_search_results))
