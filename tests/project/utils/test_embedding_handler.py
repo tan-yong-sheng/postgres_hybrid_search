@@ -1,7 +1,7 @@
 import json
 from pathlib import Path
 
-from project.utils.embedding_handler import get_embedding, openai_client  # noqa: F401
+from project.utils.embedding_handler import get_embedding
 
 
 def test_integrate_get_embedding():
