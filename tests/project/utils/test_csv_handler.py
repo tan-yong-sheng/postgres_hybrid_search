@@ -20,8 +20,7 @@ def test_integrate_export_to_csv_with_header(tmp_path):
     # Read the CSV content
     with open(temp_file, mode="r", newline="") as csv_file:
         result = csv_file.read()
-        print(repr(result))
-    print("========1")
+
     # Assert the CSV content matches the expected output
     assert result == expected_output
 
@@ -38,11 +37,11 @@ def test_integrate_export_to_csv_without_header(tmp_path):
     temp_file = tmp_path / "test_without_header.csv"
 
     # Call the function
-    export_to_csv(temp_file, data, header=False)
+    _ = export_to_csv(temp_file, data, header=False)
 
     # Read the CSV content
     with open(temp_file, mode="r", newline="") as csv_file:
         result = csv_file.read()
-        print(repr(result))
+
     # Assert the CSV content matches the expected output
     assert result == expected_output
