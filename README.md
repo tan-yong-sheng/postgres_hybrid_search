@@ -2,9 +2,9 @@
 
 Coding environment: Linux in Github Codespaces (Note: Please read the setup guide at https://www.tanyongsheng.com/note/building-vector-search-for-financial-news-with-sqlalchemy-and-postgresql/ for more details)
 
-1. rename `.env.sample` file to `.env`
+1. copy `.env.sample` file to `.env` via typing this into terminal `cp .env.sample .env`, and then change the environment variables yourselves
 
-1. Setting up virtual environment
+2. Setting up virtual environment
 
 ```
 python -m virtualenv .venv
@@ -12,25 +12,25 @@ source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
-1. Creating PostgreSQL instances via docker `docker compose up -d`
+3. Creating PostgreSQL instances via docker `docker compose up -d`
 
-3. Setting up database: `python -m project.db_models`
+4. Setting up database: `python -m project.db_models`
 
-4. Scrape stock tickers: `python -m project.tasks.scrape_tickers`
+5. Scrape stock tickers: `python -m project.tasks.scrape_tickers`
 
-5. Insert stock tickers into database `python -m project.tasks.insert_tickers_db`
+6. Insert stock tickers into database `python -m project.tasks.insert_tickers_db`
 
-6. Scrape news: `python -m project.tasks.scrape_news`
+7. Scrape news: `python -m project.tasks.scrape_news`
 
-7. Insert news into database: `python -m project.tasks.insert_news_db`
+8. Insert news into database: `python -m project.tasks.insert_news_db`
 
-8. Train a spacy model to recognize stock codes, stock symbols, and company name from news text: `python -m project.ml_models.train_extract_tickers`
+9. Train a spacy model to recognize stock codes, stock symbols, and company name from news text: `python -m project.ml_models.train_extract_tickers`
 
-9. Recognize stock codes, stock symbols, and company name from news text using trained spacy model, and then insert those records into the database table: `python -m project.tasks.insert_news_to_tickers_db`
+10. Recognize stock codes, stock symbols, and company name from news text using trained spacy model, and then insert those records into the database table: `python -m project.tasks.insert_news_to_tickers_db`
 
-10. Insert embeddings into database: `python -m project.tasks.insert_news_embedding_db`
+11. Insert embeddings into database: `python -m project.tasks.insert_news_embedding_db`
 
-11. Perform search for relevant news:
+12. Perform search for relevant news:
 - Full text search: `python -m project.tasks.full_text_search_news`
 - Vector search: `python -m project.tasks.vector_search_news`
 - Hybrid search: `python -m project.tasks.hybrid_search_news`
