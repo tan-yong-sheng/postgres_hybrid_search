@@ -1,13 +1,11 @@
 import logging
-from typing import Literal
+from typing import Iterable, Literal
 
 from sqlalchemy.sql.expression import desc, false, func
 
 from project.db_connection import db_context
 from project.db_models import NewsOrm, StockSymbolOrm
 from project.utils.nlp_stock_handler import extract_financial_entities
-
-from typing import Iterable
 
 logger = logging.getLogger(__name__)
 
@@ -104,7 +102,11 @@ if __name__ == "__main__":
         }
         news_to_stocksymbols_items.append(news_to_stocksymbols)
 
-    # bug:
+    from datetime import datetime
+
     from project.utils.csv_handler import export_list_to_csv
 
-    _ = export_list_to_csv("data/news_to_stocksymbols/nts_.csv", news_to_stocksymbols_items)
+    _ = export_list_to_csv(
+        f"data/news_to_stocksymbols/nts_{datetime.now()}.csv",
+        news_to_stocksymbols_items,
+    )
