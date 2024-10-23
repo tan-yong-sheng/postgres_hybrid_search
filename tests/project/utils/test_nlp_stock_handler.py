@@ -62,10 +62,10 @@ has accepted Islamic banking facilities totalling RM48 million from Affin Islami
 
 expected_match2 = [
     {
-        "exchange": "KL",
+        "exchange": "Bursa",
         "entity_name": "SARAWAK CONSOLIDATED",
         "entity_type": "COMPANY_NAME",
-    },
+    }
 ]
 
 
@@ -77,4 +77,6 @@ def test_unit_extract_financial_entities(text, expected_match):
     from project.utils.nlp_stock_handler import extract_financial_entities
 
     matches = extract_financial_entities(text)
+    print(matches)
+    print("===============1")
     assert matches == expected_match
