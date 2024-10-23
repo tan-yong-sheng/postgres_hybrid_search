@@ -77,6 +77,4 @@ def test_unit_extract_financial_entities(text, expected_match):
     from project.utils.nlp_stock_handler import extract_financial_entities
 
     matches = extract_financial_entities(text)
-    print(matches)
-    print("===============1")
     assert matches == expected_match
