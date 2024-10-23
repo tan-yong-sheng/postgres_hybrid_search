@@ -96,7 +96,7 @@ class NewsOrm(Base):
     is_ticker_checked = Column(Boolean, default=False, server_default=text("false"))
 
 
-class NewsToStockSymbol(Base):
+class NewsToStockSymbolOrm(Base):
     __tablename__ = "news_to_stock_symbol"
 
     id = Column(Integer, primary_key=True, autoincrement=True)

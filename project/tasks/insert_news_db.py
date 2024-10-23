@@ -11,12 +11,13 @@ from project.schemas.news_schema import NewsCreate
 logger = logging.getLogger(__name__)
 
 
-def check_existing_news(db: Session, news: dict):
+def check_existing_news(db: Session, news: dict) -> NewsOrm:
+    news_obj = NewsCreate(**news)
     existing_news = (
         db.query(NewsOrm)
         .filter(
-            (NewsOrm.title == news["title"])
-            & (NewsOrm.created_at == news["created_at"])
+            (NewsOrm.title == news_obj.title)
+            & (NewsOrm.created_at == news_obj.created_at)
         )
         .first()
     )
@@ -27,6 +28,9 @@ def insert_news_into_db(csv_file_path: str):
     from project.utils.csv_handler import read_csv_file
 
     rows = read_csv_file(csv_file_path)
+    if not rows:
+        logger.debug(f"No data found in the file: {csv_file_path}")
+        return
 
     with db_context() as db_session:
         for row in rows:

@@ -1,5 +1,8 @@
 import csv
+from logging import getLogger
 from typing import Iterable
+
+logger = getLogger(__name__)
 
 
 def read_csv_file(file_path: str):
@@ -24,10 +27,14 @@ def export_iterable_to_csv(
 def export_list_to_csv(filename: str, data: list[dict], header: bool = True):
     with open(filename, mode="w", newline="") as csv_file:
         writer = csv.writer(csv_file, quotechar='"', delimiter=",")
-        if header is True:
-            header_data = dict(data[0])
-            writer.writerow(header_data.keys())
-        for row in data:
-            row_data = dict(row)
-            writer.writerow(row_data.values())
+        try:
+            if header is True:
+                header_data = dict(data[0])
+                writer.writerow(header_data.keys())
+            for row in data:
+                row_data = dict(row)
+                writer.writerow(row_data.values())
+        except IndexError:
+            logger.debug("Data is empty")
+
     print(f"Data exported to {filename}")

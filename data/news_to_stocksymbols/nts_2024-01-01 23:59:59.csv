@@ -1,0 +1,3 @@
+news_id,stock_symbol_id,exchange,entity_type,entity_name,stock_symbol,company_name
+574,,,STOCK_SYMBOL,SOP,,
+570,639,Bursa,COMPANY_NAME,MAH SING GROUP,MAHSING,MAH SING GROUP BHD

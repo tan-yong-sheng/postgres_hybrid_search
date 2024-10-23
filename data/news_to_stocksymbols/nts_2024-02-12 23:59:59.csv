@@ -1,0 +1,3 @@
+news_id,stock_symbol_id,exchange,entity_type,entity_name,stock_symbol,company_name
+5218,271,Bursa,COMPANY_NAME,DATASONIC GROUP,DSONIC,DATASONIC GROUP BERHAD
+5218,,,STOCK_SYMBOL,MSC,,

@@ -57,12 +57,21 @@ expected_match1 = [
     },
 ]
 
+text2 = """SCIB Concrete Manufacturing Sdn Bhd, a wholly owned subsidiary of Sarawak Consolidated Industries Bhd (KL:SCIB), 
+has accepted Islamic banking facilities totalling RM48 million from Affin Islamic Bank Bhd."""
+
+expected_match2 = [
+    {
+        "exchange": "KL",
+        "entity_name": "SARAWAK CONSOLIDATED",
+        "entity_type": "COMPANY_NAME",
+    },
+]
+
 
 @pytest.mark.parametrize(
     "text, expected_match",
-    [
-        (text1, expected_match1),
-    ],
+    [(text1, expected_match1), (text2, expected_match2)],
 )
 def test_unit_extract_financial_entities(text, expected_match):
     from project.utils.nlp_stock_handler import extract_financial_entities

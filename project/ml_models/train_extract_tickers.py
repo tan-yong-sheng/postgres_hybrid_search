@@ -225,6 +225,31 @@ def label_company_name(label: str, text: str):
                     else:
                         pattern["pattern"].append({"LOWER": word})
                 patterns.append(pattern)
+
+        # Pattern with 'industries' variations
+        ind_variations = [("industries", "ind"), ("ind", "industries")]
+        for old, new in ind_variations:
+            pattern = {"label": label, "pattern": []}
+            for word in words:
+                if word == old:
+                    pattern["pattern"].append({"LOWER": new})
+                else:
+                    pattern["pattern"].append({"LOWER": word})
+            patterns.append(pattern)
+
+        # Combine 'industries' and last word variations
+        for ind_old, ind_new in ind_variations:
+            for last_old, last_new in last_word_variations:
+                pattern = {"label": label, "pattern": []}
+                for idx, word in enumerate(words):
+                    if word == ind_old:
+                        pattern["pattern"].append({"LOWER": ind_new})
+                    elif idx == len(words) - 1 and word == last_old:
+                        pattern["pattern"].append({"LOWER": last_new})
+                    else:
+                        pattern["pattern"].append({"LOWER": word})
+                patterns.append(pattern)
+
     return patterns
 
 

@@ -1,7 +1,7 @@
 from sqlalchemy import func
 from sqlalchemy.orm import Session
 
-from project.db_models import NewsOrm, NewsToStockSymbol, StockSymbolOrm
+from project.db_models import NewsOrm, NewsToStockSymbolOrm, StockSymbolOrm
 from project.schemas.news_schema import NewsSearchReturn
 
 
@@ -9,9 +9,9 @@ from project.schemas.news_schema import NewsSearchReturn
 def find_news_with_keywords(
     db: Session, query: str, companies_name: list[str], limit: int = 10
 ):
-    stock_ids = [
-        stock_id[0]
-        for stock_id in (
+    stock_symbol_ids = [
+        stock_symbol_id[0]
+        for stock_symbol_id in (
             db.query(StockSymbolOrm.id)
             .filter(StockSymbolOrm.company_name.in_(companies_name))
             .all()
@@ -20,8 +20,8 @@ def find_news_with_keywords(
     news_ids = [
         news_id[0]
         for news_id in (
-            db.query(NewsToStockSymbol.news_id)
-            .filter(NewsToStockSymbol.stock_symbol_id.in_(stock_ids))
+            db.query(NewsToStockSymbolOrm.news_id)
+            .filter(NewsToStockSymbolOrm.stock_symbol_id.in_(stock_symbol_ids))
             .all()
         )
     ]

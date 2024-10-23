@@ -1,0 +1,4 @@
+news_id,stock_symbol_id,exchange,entity_type,entity_name,stock_symbol,company_name
+31128,,,STOCK_SYMBOL,TM,,
+31126,,,STOCK_SYMBOL,SIMEPROP,,
+31284,,,STOCK_SYMBOL,SIMEPROP,,

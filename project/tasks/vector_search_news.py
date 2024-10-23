@@ -1,7 +1,7 @@
 from sqlalchemy.orm import Session
 from sqlalchemy.sql.expression import desc
 
-from project.db_models import NewsOrm, NewsToStockSymbol, StockSymbolOrm
+from project.db_models import NewsOrm, NewsToStockSymbolOrm, StockSymbolOrm
 from project.schemas.news_schema import NewsSearchReturn
 
 
@@ -12,9 +12,9 @@ def find_news_with_similar_embeddings(
     limit: int = 30,
 ):
     similarity_threshold = 0.7
-    stock_ids = [
-        stock_id[0]
-        for stock_id in (
+    stock_symbol_ids = [
+        stock_symbol_id[0]
+        for stock_symbol_id in (
             db.query(StockSymbolOrm.id)
             .filter(StockSymbolOrm.company_name.in_(companies_name))
             .all()
@@ -23,8 +23,8 @@ def find_news_with_similar_embeddings(
     news_ids = [
         news_id[0]
         for news_id in (
-            db.query(NewsToStockSymbol.news_id)
-            .filter(NewsToStockSymbol.stock_symbol_id.in_(stock_ids))
+            db.query(NewsToStockSymbolOrm.news_id)
+            .filter(NewsToStockSymbolOrm.stock_symbol_id.in_(stock_symbol_ids))
             .all()
         )
     ]

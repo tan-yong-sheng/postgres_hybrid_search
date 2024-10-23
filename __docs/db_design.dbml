@@ -10,7 +10,7 @@ Table StockSymbolOrm {
   company_description VARCHAR
 }
 
-Table NewsToStockSymbol {
+Table NewsToStockSymbolOrm {
   id SERIAL [pk, increment]
   stock_symbol_id INTEGER [ref: > StockSymbolOrm.id]
   news_id INTEGER [ref: > NewsOrm.id]

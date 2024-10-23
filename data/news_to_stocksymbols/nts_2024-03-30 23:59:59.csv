@@ -1,0 +1,4 @@
+news_id,stock_symbol_id,exchange,entity_type,entity_name,stock_symbol,company_name
+10928,552,Bursa,COMPANY_NAME,KEYFIELD INTERNATIONAL,KEYFIELD,KEYFIELD INTERNATIONAL BERHAD
+10931,,,STOCK_SYMBOL,REIT,,
+10923,,,STOCK_SYMBOL,MKHOP,,

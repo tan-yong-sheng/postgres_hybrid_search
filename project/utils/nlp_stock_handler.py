@@ -30,7 +30,9 @@ def get_entity_name(span):
         return span_text
 
     elif span.label_ == "COMPANY_NAME":
-        span_text = re.sub(r"(CORP|CORPORATION)?\s(BERHAD|BHD)$", "", span_text)
+        span_text = re.sub(
+            r"(IND|INDUSTRIES|CORP|CORPORATION)?\s(BERHAD|BHD)$", "", span_text
+        )
         return span_text.strip()
 
 

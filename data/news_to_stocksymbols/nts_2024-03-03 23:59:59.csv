@@ -1,0 +1,3 @@
+news_id,stock_symbol_id,exchange,entity_type,entity_name,stock_symbol,company_name
+7622,203,Bursa,COMPANY_NAME,CIMB GROUP HOLDINGS,CIMB,CIMB GROUP HOLDINGS BERHAD
+7623,1018,Bursa,COMPANY_NAME,SP SETIA,SPSETIA,SP SETIA BHD

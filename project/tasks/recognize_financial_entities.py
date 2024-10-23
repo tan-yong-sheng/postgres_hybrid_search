@@ -1,7 +1,8 @@
 import logging
+from datetime import datetime
 from typing import Iterable, Literal
 
-from sqlalchemy.sql.expression import desc, false, func
+from sqlalchemy.sql.expression import desc, func
 
 from project.db_connection import db_context
 from project.db_models import NewsOrm, StockSymbolOrm
@@ -10,29 +11,28 @@ from project.utils.nlp_stock_handler import extract_financial_entities
 logger = logging.getLogger(__name__)
 
 
-def extract_financial_entities_from_news_db() -> Iterable[dict]:
-    with db_context() as db_session:
-        news_content_without_ticker_checked = (
-            db_session.query(NewsOrm).filter(NewsOrm.is_ticker_checked == false()).all()
+def query_news_content(db_session, start_date: datetime, end_date: datetime):
+    return (
+        db_session.query(NewsOrm)
+        .filter(
+            NewsOrm.created_at >= start_date,
+            NewsOrm.created_at <= end_date,
         )
+        .all()
+    )
 
-        if not news_content_without_ticker_checked:
-            logger.info(
-                "No news content to be processed to get stock symbols, stock code or company names"
-            )
-            return
+
+def extract_financial_entities_from_news_db(
+    start_date: datetime, end_date: datetime
+) -> Iterable[dict]:
+    with db_context() as db_session:
+        news_content_without_ticker_checked = query_news_content(
+            db_session, start_date, end_date
+        )
 
         for news in news_content_without_ticker_checked:
             financial_entities_matches = extract_financial_entities(news.content)
-
-            if not financial_entities_matches:
-                yield {
-                    "news_id": news.id,
-                    "entity_name": None,
-                    "entity_type": None,
-                    "exchange": None,
-                }
-            else:
+            if financial_entities_matches:
                 for match in financial_entities_matches:
                     yield {
                         "news_id": news.id,
@@ -73,40 +73,48 @@ def perform_trigram_search_on_financial_entities(
         )
         if result is not None:
             return {
-                "stock_id": result.id,
+                "stock_symbol_id": result.id,
                 "stock_symbol": result.stock_symbol,
                 "company_name": result.company_name,
             }
         else:
-            return {"stock_id": None, "stock_symbol": None, "company_name": None}
+            return {"stock_symbol_id": None, "stock_symbol": None, "company_name": None}
 
 
 if __name__ == "__main__":
-    news_items = extract_financial_entities_from_news_db()
-    news_to_stocksymbols_items = []
-    for item in news_items:
-        stock_ids = perform_trigram_search_on_financial_entities(
-            exchange_market=item["exchange"],
-            entity_name=item["entity_name"],
-            entity_type=item["entity_type"],
+    from project.utils.date_handler import generate_date_ranges
+
+    # Define the overall date range
+    overall_start_date = datetime.strptime("2024-01-01 00:00:00", "%Y-%m-%d %H:%M:%S")
+    overall_end_date = datetime.strptime("2024-10-14 23:59:59", "%Y-%m-%d %H:%M:%S")
+
+    for start_date, end_date in generate_date_ranges(
+        overall_start_date, overall_end_date
+    ):
+        news_items = extract_financial_entities_from_news_db(start_date, end_date)
+
+        news_to_stocksymbols_items = []
+        for item in news_items:
+            stock_symbol_ids = perform_trigram_search_on_financial_entities(
+                exchange_market=item["exchange"],
+                entity_name=item["entity_name"],
+                entity_type=item["entity_type"],
+            )
+
+            news_to_stocksymbols = {
+                "news_id": item["news_id"],
+                "stock_symbol_id": stock_symbol_ids["stock_symbol_id"],
+                "exchange": item["exchange"],
+                "entity_type": item["entity_type"],
+                "entity_name": item["entity_name"],
+                "stock_symbol": stock_symbol_ids["stock_symbol"],
+                "company_name": stock_symbol_ids["company_name"],
+            }
+            news_to_stocksymbols_items.append(news_to_stocksymbols)
+
+        from project.utils.csv_handler import export_list_to_csv
+
+        _ = export_list_to_csv(
+            f"data/news_to_stocksymbols/nts_{end_date}.csv",
+            news_to_stocksymbols_items,
         )
-
-        news_to_stocksymbols = {
-            "news_id": item["news_id"],
-            "stock_id": stock_ids["stock_id"],
-            "exchange": item["exchange"],
-            "entity_type": item["entity_type"],
-            "entity_name": item["entity_name"],
-            "stock_symbol": stock_ids["stock_symbol"],
-            "company_name": stock_ids["company_name"],
-        }
-        news_to_stocksymbols_items.append(news_to_stocksymbols)
-
-    from datetime import datetime
-
-    from project.utils.csv_handler import export_list_to_csv
-
-    _ = export_list_to_csv(
-        f"data/news_to_stocksymbols/nts_{datetime.now()}.csv",
-        news_to_stocksymbols_items,
-    )
