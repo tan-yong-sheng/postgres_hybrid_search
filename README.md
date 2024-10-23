@@ -37,7 +37,7 @@ pip install -r requirements.txt
 
 ## Additional note:
 
-For `project/tasks/scrape_tickers.py` and `project/tasks/insert_news_db.py`, by default, it scrape and inserts news into database table starting from 1 Jan 2024 to 14 Oct 2024, but feel free to change these parameters according to your preference.
+For `project/tasks/scrape_tickers.py`, `project/tasks/insert_news_db.py`, `project/tasks/recognize_financial_entities` & `project/tasks/insert_news_to_tickers_db.py`, by default, it scrape and inserts news into database table starting from 1 Jan 2024 to 14 Oct 2024, but feel free to change these parameters according to your preference.
 
 Btw, this is just a simple prototype project. Thanks for reading, and hope for more suggestions. And please let me know if you spot any errors.
 

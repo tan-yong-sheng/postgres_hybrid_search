@@ -45,7 +45,7 @@ def insert_news_into_db(csv_file_path: str):
                     db_session.commit()
                     db_session.refresh(news_data_obj)
                 except ValidationError as e:
-                    logger.error("Validation error: ", e)
+                    logger.debug("Validation error: ", e)
 
 
 if __name__ == "__main__":
