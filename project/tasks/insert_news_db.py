@@ -43,7 +43,7 @@ def insert_news_into_db(csv_file_path: str):
                     news_data_obj = NewsOrm(**news_data_dict.__dict__)
                     db_session.add(news_data_obj)
                     db_session.commit()
-                    db_session.refresh(news_data_obj)
+
                 except ValidationError as e:
                     logger.debug("Validation error: ", e)
 

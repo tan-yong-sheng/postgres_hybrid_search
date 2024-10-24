@@ -55,9 +55,10 @@ def insert_news_to_stock_symbol(csv_file_path: str) -> list[int]:
                     )
                     db_session.add(news_to_stock_symbol_obj)
                     db_session.commit()
+                    # used .refresh() method when you want to get up-to-date object
                     db_session.refresh(news_to_stock_symbol_obj)
 
-                    news_id_list.append(row["news_id"])
+                    news_id_list.append(news_to_stock_symbol_obj.news_id)
             except ValidationError as e:
                 logger.info(
                     f"{e}: Either news_id or stock_symbol_id is missing in the dataset"
