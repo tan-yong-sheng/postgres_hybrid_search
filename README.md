@@ -4,7 +4,9 @@ Coding environment: Linux in Github Codespaces (Note: Please read the setup guid
 
 1. copy `.env.sample` file to `.env` via typing this into terminal `cp .env.sample .env`, and then change the environment variables yourselves
 
-2. Setting up virtual environment
+2. Set up the Cloudflare AI gateway, as we're going to use its embedding API. See [this guide](https://developers.cloudflare.com/ai-gateway/get-started/?_gl=1*uflu3q*_gcl_au*NjcxMDgzMDguMTc0NzAxMzYyOA..*_ga*ODYzMmM0YzItMGVkYy00MmU5LThkOGMtN2QwNDU5NmM1ZmUy*_ga_SQCRB0TXZW*czE3NTIzMTU3ODMkbzEkZzEkdDE3NTIzMTU3ODkkajU0JGwwJGgw) to know how to setup AI Gateway to fill in `CLOUDFLARE_ACCOUNT_ID`, `CLOUDFLARE_API_KEY` and `CLOUDFLARE_GATEWAY_ID` in our .env file.
+
+3. Setting up virtual environment
 
 ```
 python -m virtualenv .venv
@@ -12,25 +14,25 @@ source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
-3. Creating PostgreSQL instances via docker `docker compose up -d`
+4. Creating PostgreSQL instances via docker `docker compose up -d`
 
-4. Setting up database: `python -m project.db_models`
+5. Setting up database: `python -m project.db_models`
 
-5. Scrape stock tickers: `python -m project.tasks.scrape_tickers`
+6. Scrape stock tickers: `python -m project.tasks.scrape_tickers`
 
-6. Insert stock tickers into database `python -m project.tasks.insert_tickers_db`
+7. Insert stock tickers into database `python -m project.tasks.insert_tickers_db`
 
-7. Scrape news: `python -m project.tasks.scrape_news`
+8. Scrape news: `python -m project.tasks.scrape_news`
 
-8. Insert news into database: `python -m project.tasks.insert_news_db`
+9. Insert news into database: `python -m project.tasks.insert_news_db`
 
-9. Train a spacy model to recognize stock codes, stock symbols, and company name from news text: `python -m project.ml_models.train_extract_tickers`
+10. Train a spacy model to recognize stock codes, stock symbols, and company name from news text: `python -m project.ml_models.train_extract_tickers`
 
-10. Recognize stock codes, stock symbols, and company name from news text using trained spacy model, and then insert those records into the database table: `python -m project.tasks.insert_news_to_tickers_db`
+11. Recognize stock codes, stock symbols, and company name from news text using trained spacy model, and then insert those records into the database table: `python -m project.tasks.insert_news_to_tickers_db`
 
-11. Insert embeddings into database: `python -m project.tasks.insert_news_embedding_db`
+12. Insert embeddings into database: `python -m project.tasks.insert_news_embedding_db`
 
-12. Perform search for relevant news:
+13. Perform search for relevant news:
 - Full text search: `python -m project.tasks.full_text_search_news`
 - Vector search: `python -m project.tasks.vector_search_news`
 - Hybrid search: `python -m project.tasks.hybrid_search_news`
