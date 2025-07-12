@@ -26,7 +26,15 @@ services:
     ports:
       - 8081:8080
     networks:
+      - proxy
       - internal
+    labels:
+      - traefik.enable=true
+      - traefik.http.routers.db_dashboard.rule=Host(`db_dashboard.${DOMAINNAME}`)
+      - traefik.http.routers.db_dashboard.entrypoints=web,websecure
+      - traefik.http.routers.db_dashboard.tls=true
+      - traefik.http.routers.db_dashboard.tls.certresolver=letsencrypt
+      - traefik.docker.network=proxy
 
   mcp:
     build:
@@ -37,10 +45,21 @@ services:
     depends_on:
       - dev-db
     networks:
+      - proxy
       - internal
+    labels:
+      - traefik.enable=true
+      - traefik.http.routers.mcp.rule=Host(`mcp.${DOMAINNAME}`)
+      - traefik.http.routers.mcp.entrypoints=web,websecure
+      - traefik.http.routers.mcp.tls=true
+      - traefik.http.routers.mcp.tls.certresolver=letsencrypt
+      - traefik.docker.network=proxy
+
 
 volumes:
   postgres_data:
 
 networks:
   internal:
+  proxy:
+    external: true
