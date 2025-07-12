@@ -1,3 +1,4 @@
+import argparse
 import logging
 from datetime import datetime
 
@@ -51,13 +52,23 @@ def insert_news_into_db(csv_file_path: str):
 if __name__ == "__main__":
     from project.utils.date_handler import generate_date_ranges
 
+    parser = argparse.ArgumentParser(description="Scrape KLSE news between two datetime ranges.")
+    parser.add_argument(
+        "--start-date", required=True, help="Start date in format YYYY-MM-DD HH:MM:SS"
+    )
+    parser.add_argument(
+        "--end-date", required=True, help="End date in format YYYY-MM-DD HH:MM:SS"
+    )
+
+    args = parser.parse_args()
+
     # Define the overall date range
-    overall_start_date = datetime.strptime("2024-01-01 00:00:00", "%Y-%m-%d %H:%M:%S")
-    overall_end_date = datetime.strptime("2024-10-14 23:59:59", "%Y-%m-%d %H:%M:%S")
+    start_date = datetime.strptime(args.start_date, "%Y-%m-%d %H:%M:%S")
+    end_date = datetime.strptime(args.end_date, "%Y-%m-%d %H:%M:%S")
 
     # Loop over each date range and scrape news data
-    for start_date, end_date in generate_date_ranges(
-        overall_start_date, overall_end_date
+    for start, end in generate_date_ranges(
+        start_date, end_date
     ):
-        print(f"Inserting news from csv file: data/news/news_{end_date}.csv")
-        _ = insert_news_into_db(f"data/news/news_{end_date}.csv")
+        print(f"Inserting news from csv file: data/news/news_{end}.csv")
+        _ = insert_news_into_db(f"data/news/news_{end}.csv")

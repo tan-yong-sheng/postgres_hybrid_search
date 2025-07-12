@@ -1,3 +1,4 @@
+import argparse
 import logging
 from datetime import datetime
 from typing import Iterable, Literal
@@ -82,16 +83,30 @@ def perform_trigram_search_on_financial_entities(
 
 
 if __name__ == "__main__":
+    import os
+    
+    os.makedirs("data/news_to_stocksymbols", exist_ok=True)
+    
     from project.utils.date_handler import generate_date_ranges
 
-    # Define the overall date range
-    overall_start_date = datetime.strptime("2024-01-01 00:00:00", "%Y-%m-%d %H:%M:%S")
-    overall_end_date = datetime.strptime("2024-10-14 23:59:59", "%Y-%m-%d %H:%M:%S")
+    parser = argparse.ArgumentParser(description="Scrape KLSE news between two datetime ranges.")
+    parser.add_argument(
+        "--start-date", required=True, help="Start date in format YYYY-MM-DD HH:MM:SS"
+    )
+    parser.add_argument(
+        "--end-date", required=True, help="End date in format YYYY-MM-DD HH:MM:SS"
+    )
 
-    for start_date, end_date in generate_date_ranges(
-        overall_start_date, overall_end_date
+    args = parser.parse_args()
+    
+    # Define the overall date range
+    start_date = datetime.strptime(args.start_date, "%Y-%m-%d %H:%M:%S")
+    end_date = datetime.strptime(args.end_date, "%Y-%m-%d %H:%M:%S")
+
+    for start, end in generate_date_ranges(
+        start_date, end_date
     ):
-        news_items = extract_financial_entities_from_news_db(start_date, end_date)
+        news_items = extract_financial_entities_from_news_db(start, end)
 
         news_to_stocksymbols_items = []
         for item in news_items:
@@ -115,6 +130,6 @@ if __name__ == "__main__":
         from project.utils.csv_handler import export_list_to_csv
 
         _ = export_list_to_csv(
-            f"data/news_to_stocksymbols/nts_{end_date}.csv",
+            f"data/news_to_stocksymbols/nts_{end}.csv",
             news_to_stocksymbols_items,
         )

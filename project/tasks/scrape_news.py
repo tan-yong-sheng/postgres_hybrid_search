@@ -99,12 +99,15 @@ if __name__ == "__main__":
 
     from project.utils.date_handler import generate_date_ranges
 
+    start_date = datetime.strptime(args.start_date, "%Y-%m-%d %H:%M:%S")
+    end_date = datetime.strptime(args.end_date, "%Y-%m-%d %H:%M:%S")
+
     # Loop over each date range and scrape news data
-    for start_date, end_date in generate_date_ranges(
-        args.start_date, args.end_date
+    for start, end in generate_date_ranges(
+        start_date, end_date
     ):
-        news_items = scrape_news(start_date=start_date, end_date=end_date)
+        news_items = scrape_news(start_date=start, end_date=end)
         # Process the yielded news items and write them to a CSV
         from project.utils.csv_handler import export_iterable_to_csv
 
-        _ = export_iterable_to_csv(f"data/news/news_{end_date}.csv", news_items)
+        _ = export_iterable_to_csv(f"data/news/news_{end}.csv", news_items)

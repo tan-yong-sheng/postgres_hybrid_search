@@ -22,25 +22,26 @@ pip install -r requirements.txt
 
 7. Insert stock tickers into database `python -m project.tasks.insert_tickers_db`
 
-8. Scrape news: `python -m project.tasks.scrape_news --start-date="2024-01-01 00:00:00" --end-date="2024-10-14 23:59:59`
+8. Scrape news: `python -m project.tasks.scrape_news --start-date="2025-01-01 00:00:00" --end-date="2025-07-11 23:59:59"`
 
-
-9. Insert news into database: `python -m project.tasks.insert_news_db`
+9. Insert news into database: `python -m project.tasks.insert_news_db --start-date="2025-01-01 00:00:00" --end-date="2025-07-11 23:59:59"`
 
 10. Train a spacy model to recognize stock codes, stock symbols, and company name from news text: `python -m project.ml_models.train_extract_tickers`
 
-11. Recognize stock codes, stock symbols, and company name from news text using trained spacy model, and then insert those records into the database table: `python -m project.tasks.insert_news_to_tickers_db`
+11. Recognize stock codes, stock symbols, and company name from news text using trained spacy model: `python -m project.tasks.recognize_financial_entities --start-date="2025-01-01 00:00:00" --end-date="2025-07-11 23:59:59"`
 
-12. Insert embeddings into database: `python -m project.tasks.insert_news_embedding_db`
+12. Then insert those records into the database table: `python -m project.tasks.insert_news_to_tickers_db --start-date="2025-01-01 00:00:00" --end-date="2025-07-11 23:59:59"`
 
-13. Perform search for relevant news:
+13. Insert embeddings into database: `python -m project.tasks.insert_news_embedding_db`
+
+14. Perform search for relevant news:
 - Full text search: `python -m project.tasks.full_text_search_news`
 - Vector search: `python -m project.tasks.vector_search_news`
 - Hybrid search: `python -m project.tasks.hybrid_search_news`
 
 ## Additional note:
 
-For `project/tasks/scrape_tickers.py`, `project/tasks/insert_news_db.py`, `project/tasks/recognize_financial_entities` & `project/tasks/insert_news_to_tickers_db.py`, by default, it scrape and inserts news into database table starting from 1 Jan 2024 to 14 Oct 2024, but feel free to change these parameters according to your preference.
+For `project/tasks/scrape_tickers.py`, `project/tasks/insert_news_db.py`, `project/tasks/recognize_financial_entities` & `project/tasks/insert_news_to_tickers_db.py`, please feel free to change the start_date and end_date in the terminal shell, so that you could scrape the data accordingly.
 
 Btw, this is just a simple prototype project. Thanks for reading, and hope for more suggestions. And please let me know if you spot any errors.
 

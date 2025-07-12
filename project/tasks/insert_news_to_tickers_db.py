@@ -1,3 +1,4 @@
+import argparse
 import logging
 from datetime import datetime
 
@@ -78,18 +79,28 @@ def update_news_is_ticker_checked(news_id: int):
 if __name__ == "__main__":
     from project.utils.date_handler import generate_date_ranges
 
-    # Define the overall date range
-    overall_start_date = datetime.strptime("2024-01-01 00:00:00", "%Y-%m-%d %H:%M:%S")
-    overall_end_date = datetime.strptime("2024-10-14 23:59:59", "%Y-%m-%d %H:%M:%S")
+    parser = argparse.ArgumentParser(description="Scrape KLSE news between two datetime ranges.")
+    parser.add_argument(
+        "--start-date", required=True, help="Start date in format YYYY-MM-DD HH:MM:SS"
+    )
+    parser.add_argument(
+        "--end-date", required=True, help="End date in format YYYY-MM-DD HH:MM:SS"
+    )
 
-    for start_date, end_date in generate_date_ranges(
-        overall_start_date, overall_end_date
+    args = parser.parse_args()
+
+    # Define the overall date range
+    start_date = datetime.strptime(args.start_date, "%Y-%m-%d %H:%M:%S")
+    end_date = datetime.strptime(args.end_date, "%Y-%m-%d %H:%M:%S")
+
+    for start, end in generate_date_ranges(
+        start_date, end_date
     ):
         news_id_list_with_successful_update = insert_news_to_stock_symbol(
-            f"data/news_to_stocksymbols/nts_{end_date}.csv"
+            f"data/news_to_stocksymbols/nts_{end}.csv"
         )
         logger.info(
-            f"Inserting news to stock symbol from csv file: data/news_to_stocksymbols/nts_{end_date}.csv"
+            f"Inserting news to stock symbol from csv file: data/news_to_stocksymbols/nts_{end}.csv"
         )
 
         # Update the `is_ticker_checked` column to True for the `news` table
