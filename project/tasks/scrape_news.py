@@ -1,3 +1,4 @@
+import argparse
 from datetime import datetime
 from typing import Optional
 
@@ -84,17 +85,23 @@ def scrape_news(start_date: Optional[str] = None, end_date: Optional[str] = None
 if __name__ == "__main__":
     import os
 
-    os.makedirs("data/news", exist_ok=True)
+    parser = argparse.ArgumentParser(description="Scrape KLSE news between two datetime ranges.")
+    parser.add_argument(
+        "--start-date", required=True, help="Start date in format YYYY-MM-DD HH:MM:SS"
+    )
+    parser.add_argument(
+        "--end-date", required=True, help="End date in format YYYY-MM-DD HH:MM:SS"
+    )
 
-    # Define the overall date range
-    overall_start_date = datetime.strptime("2024-01-01 00:00:00", "%Y-%m-%d %H:%M:%S")
-    overall_end_date = datetime.strptime("2024-10-14 23:59:59", "%Y-%m-%d %H:%M:%S")
+    args = parser.parse_args()
+
+    os.makedirs("data/news", exist_ok=True)
 
     from project.utils.date_handler import generate_date_ranges
 
     # Loop over each date range and scrape news data
     for start_date, end_date in generate_date_ranges(
-        overall_start_date, overall_end_date
+        args.start_date, args.end_date
     ):
         news_items = scrape_news(start_date=start_date, end_date=end_date)
         # Process the yielded news items and write them to a CSV

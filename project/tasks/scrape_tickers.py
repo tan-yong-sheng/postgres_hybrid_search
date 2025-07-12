@@ -29,12 +29,19 @@ def fetch_data(session, url):
         "type": "",
         "stockType": "",
     }
+    
+    headers = {
+        'accept': 'application/json, text/javascript, */*; q=0.01',
+        'content-type': 'application/json;charset=UTF-8',
+        'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36',
+        'x-requested-with': 'XMLHttpRequest'
+    }
 
     data_list = []
     retries = 2
 
     while True:
-        response = session.post(url, json=json_obj)
+        response = session.post(url, headers=headers, json=json_obj)
 
         if response.status_code != 200:
             if response.status_code in [429, 500, 502, 503, 504]:
@@ -94,7 +101,7 @@ def scrape_ticker_list(exchange: str, output_file: str):
     data_list = fetch_data(session, url)
     df = process_data(exchange, data_list)
     df.to_csv(output_file, index=False)
-
+    print(f"Saved the bursa tickers to the file location: {output_file}")
 
 if __name__ == "__main__":
     os.makedirs("data/symbols", exist_ok=True)

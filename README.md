@@ -22,7 +22,8 @@ pip install -r requirements.txt
 
 7. Insert stock tickers into database `python -m project.tasks.insert_tickers_db`
 
-8. Scrape news: `python -m project.tasks.scrape_news`
+8. Scrape news: `python -m project.tasks.scrape_news --start-date="2024-01-01 00:00:00" --end-date="2024-10-14 23:59:59`
+
 
 9. Insert news into database: `python -m project.tasks.insert_news_db`
 
