@@ -89,7 +89,7 @@ if __name__ == "__main__":
     
     from project.utils.date_handler import generate_date_ranges
 
-    parser = argparse.ArgumentParser(description="Scrape KLSE news between two datetime ranges.")
+    parser = argparse.ArgumentParser(description="Extract stock tickers (using rule-based approach) from KLSE news between two datetime ranges.")
     parser.add_argument(
         "--start-date", required=True, help="Start date in format YYYY-MM-DD HH:MM:SS"
     )
