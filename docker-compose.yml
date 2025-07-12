@@ -28,6 +28,15 @@ services:
     networks:
       - internal
 
+  mcp:
+    build:
+      context: .
+      dockerfile: Dockerfile.mcp
+    ports:
+      - "8000:8000"
+    depends_on:
+      - dev-db
+
 volumes:
   postgres_data:
 

@@ -1,0 +1,22 @@
+# filepath: /workspaces/postgres_hybrid_search/Dockerfile.mcp
+# Use an official lightweight Python image
+FROM python:3.12-slim
+
+# Set the working directory
+WORKDIR /app
+
+# Copy project files
+COPY . /app
+
+# Install dependencies
+# Install dependencies and set up virtual environment in a single RUN command
+RUN pip install --upgrade pip && \
+    pip install uv && \
+    uv export > requirements.txt && \
+    pip install -r requirements.txt
+
+# Expose the port
+EXPOSE 8000
+
+# Run the server - now you can use python -c without sys.path.insert
+CMD ["python", "-c", "from project.mcp.stock_news_mcp import create_server; create_server().run(transport='sse')"]

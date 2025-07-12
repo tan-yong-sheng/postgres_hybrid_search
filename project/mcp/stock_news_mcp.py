@@ -1,3 +1,5 @@
+import sys
+import os
 from datetime import datetime
 from typing import Optional
 
@@ -6,16 +8,11 @@ from pydantic import BaseModel
 from sqlalchemy import text
 from sqlalchemy.orm import Session
 
-from project.db_connection import db_context
-from project.utils.embedding_handler import get_embedding
+from project import db_context, get_embedding
 
 # Pydantic models for MCP responses
 class NewsSearchResult(BaseModel):
     id: str
-    title: str
-    content: str
-    created_at: datetime
-    score: float
 
 class NewsSearchResultPage(BaseModel):
     results: list[NewsSearchResult]
@@ -24,7 +21,11 @@ class NewsSearchResultPage(BaseModel):
 
 class NewsDetail(BaseModel):
     id: str
-
+    title: str
+    content: str
+    created_at: datetime
+    score: Optional[float] = None
+    metadata: Optional[dict] = None
 
 # Database functions (adapted from original)
 def find_similar_news(
@@ -97,6 +98,7 @@ def create_server():
     """Create the FastMCP server for hybrid news search"""
     mcp = FastMCP(
         name="Hybrid News Search MCP", 
+        host="0.0.0.0",
         instructions="Search and retrieve news articles using hybrid search (full-text + semantic)"
     )
 

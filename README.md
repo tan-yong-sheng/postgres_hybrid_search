@@ -8,12 +8,17 @@ Coding environment: Linux in Github Codespaces (Note: Please read the setup guid
 
 3. Setting up virtual environment
 
-```
+```bash
 pip install uv
 uv init
 uv venv
 source .venv/bin/activate
 uv sync
+```
+
+To export the `uv` packages to `requirements.txt`:
+```bash
+uv export > requirements.txt
 ```
 
 4. Creating PostgreSQL instances via docker `docker compose up -d`
@@ -40,6 +45,13 @@ uv sync
 - Full text search: `python -m project.tasks.full_text_search_news`
 - Vector search: `python -m project.tasks.vector_search_news`
 - Hybrid search: `python -m project.tasks.hybrid_search_news`
+
+## Building MCP
+
+1. Running the MCP server locally
+```bash
+python -c "from project.mcp.stock_news_mcp import create_server; create_server().run(transport='sse')"
+```
 
 ## Additional note:
 
