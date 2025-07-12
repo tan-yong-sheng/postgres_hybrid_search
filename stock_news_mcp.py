@@ -24,11 +24,7 @@ class NewsSearchResultPage(BaseModel):
 
 class NewsDetail(BaseModel):
     id: str
-    title: str
-    content: str
-    created_at: datetime
-    score: Optional[float] = None
-    metadata: Optional[dict] = None
+
 
 # Database functions (adapted from original)
 def find_similar_news(
@@ -105,7 +101,7 @@ def create_server():
     )
 
     @mcp.tool()
-    async def search_news(
+    async def search(
         query: str,
         match_count: int = 10,
         rrf_k: int = 50,
@@ -144,11 +140,7 @@ def create_server():
                 # Convert to Pydantic models
                 results = [
                     NewsSearchResult(
-                        id=str(result["id"]),
-                        title=result["title"],
-                        content=result["content"],
-                        created_at=result["created_at"],
-                        score=float(result["score"])
+                        id=str(result["id"])
                     )
                     for result in search_results
                 ]
@@ -163,7 +155,7 @@ def create_server():
             raise ValueError(f"Search failed: {str(e)}")
 
     @mcp.tool()
-    async def fetch_news(news_id: str) -> NewsDetail:
+    async def fetch(news_id: str) -> NewsDetail:
         """
         Fetch a specific news article by ID.
         
