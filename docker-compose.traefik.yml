@@ -42,6 +42,8 @@ services:
       - "8050:8000"
     depends_on:
       - dev-db
+    env_file:
+      - ./.env
     networks:
       - proxy
       - internal

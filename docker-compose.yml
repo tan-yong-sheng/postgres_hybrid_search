@@ -34,10 +34,10 @@ services:
       - "8050:8000"
     depends_on:
       - dev-db
+    env_file:
+      - ./.env
     networks:
       - internal
-    env_file:
-      - .env
 
 volumes:
   postgres_data:
