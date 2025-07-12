@@ -9,3 +9,4 @@ __pycache__/
 .git/
 .dockerignore
 uv.lock
+requirements.txt
