@@ -1,5 +1,5 @@
 .env
-
+.backup/
 __pycache__/
 data/
 coverage_re/
