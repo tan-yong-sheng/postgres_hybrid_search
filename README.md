@@ -9,9 +9,11 @@ Coding environment: Linux in Github Codespaces (Note: Please read the setup guid
 3. Setting up virtual environment
 
 ```
-python -m virtualenv .venv
+pip install uv
+uv init
+uv venv
 source .venv/bin/activate
-pip install -r requirements.txt
+uv sync
 ```
 
 4. Creating PostgreSQL instances via docker `docker compose up -d`

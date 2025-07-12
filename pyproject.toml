@@ -1,0 +1,21 @@
+[project]
+name = "postgres-hybrid-search"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "fastmcp>=2.2.0",
+    "lxml==5.3.0",
+    "openai==1.95.1",
+    "pandas>=2.3.1",
+    "pgvector==0.3.4",
+    "psycopg2-binary==2.9.9",
+    "pydantic>=2.9.2",
+    "pytest==8.3.3",
+    "python-dotenv==1.0.1",
+    "requests==2.32.3",
+    "spacy==3.8.2",
+    "sqlalchemy==2.0.35",
+    "tqdm==4.66.5",
+]
