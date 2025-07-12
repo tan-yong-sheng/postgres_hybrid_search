@@ -11,9 +11,7 @@ COPY . /app
 # Install dependencies
 # Install dependencies and set up virtual environment in a single RUN command
 RUN pip install --upgrade pip && \
-    pip install uv && \
-    uv export > requirements.txt && \
-    pip install -r requirements.txt
+    pip install fastmcp==2.2.0 pydantic==2.9.2 sqlalchemy==2.0.35 python-dotenv==1.0.1 openai==1.95.1
 
 # Expose the port
 EXPOSE 8000
